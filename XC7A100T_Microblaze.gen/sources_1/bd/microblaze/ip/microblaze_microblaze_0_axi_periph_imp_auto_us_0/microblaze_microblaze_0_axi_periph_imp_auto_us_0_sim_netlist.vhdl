@@ -2,10 +2,11 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sat Aug  9 12:03:30 2025
+-- Date        : Sat Aug  9 12:03:29 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
--- Command     : write_vhdl -force -mode funcsim
---               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_microblaze_0_axi_periph_imp_auto_us_0 -prefix
+--               microblaze_microblaze_0_axi_periph_imp_auto_us_0_
+--               microblaze_microblaze_0_axi_periph_imp_auto_us_0_sim_netlist.vhdl
 -- Design      : microblaze_microblaze_0_axi_periph_imp_auto_us_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -49,8 +50,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \current_word_1_reg[2]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer : entity is "axi_dwidth_converter_v2_1_36_r_upsizer";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer is
@@ -1651,8 +1650,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     \WORD_LANE[1].USE_ALWAYS_PACKER.BYTE_LANE[3].USE_RTL_DATA.USE_REGISTER.M_AXI_WDATA_I_reg[63]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \WORD_LANE[1].USE_ALWAYS_PACKER.BYTE_LANE[3].USE_RTL_DATA.USE_REGISTER.M_AXI_WDATA_I_reg[63]_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer : entity is "axi_dwidth_converter_v2_1_36_w_upsizer";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer is
@@ -3516,8 +3513,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
     \m_payload_i_reg[61]_1\ : in STD_LOGIC_VECTOR ( 60 downto 0 );
     s_ready_i_reg_3 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice : entity is "axi_register_slice_v2_1_35_axic_register_slice";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice is
@@ -8790,8 +8785,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_
     m_axi_awready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo : entity is "generic_baseblocks_v2_1_2_command_fifo";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo is
@@ -12627,8 +12620,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     m_axi_awready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer : entity is "axi_dwidth_converter_v2_1_36_a_upsizer";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer is
@@ -12863,8 +12854,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
     s_ready_i_reg_0 : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice : entity is "axi_register_slice_v2_1_35_axi_register_slice";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice is
@@ -13010,8 +12999,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     m_axi_arready : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer : entity is "axi_dwidth_converter_v2_1_36_axi_upsizer";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer is
@@ -14060,8 +14047,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
   attribute C_S_AXI_ID_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is "axi_dwidth_converter_v2_1_36_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
   attribute P_AXI4 : integer;

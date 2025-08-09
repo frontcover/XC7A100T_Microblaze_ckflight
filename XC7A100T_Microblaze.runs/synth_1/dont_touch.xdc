@@ -90,9 +90,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_1/microblaze_microblaze_0_axi_periph_imp_auto_us_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_1} -quiet] -quiet
-
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_0/microblaze_microblaze_0_axi_periph_imp_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0} -quiet] -quiet
 

@@ -360,7 +360,6 @@ begin
             elsif sending then
                 
                 if s_AXIS_S2MM_0_tvalid = '1' and s_AXIS_S2MM_0_tready = '1' then
-                    data_counter := data_counter + 1;
                     s_AXIS_S2MM_0_tdata <= std_logic_vector(data_counter);
                     
                     if data_counter = 255 then
@@ -368,7 +367,8 @@ begin
                     else
                         s_AXIS_S2MM_0_tlast <= '0';
                     end if;
-                    
+                    --data_counter := data_counter + 1;
+
                 end if;
                 
             end if;

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Aug  9 12:26:24 2025
+| Date         : Sat Aug  9 23:02:36 2025
 | Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command      : report_methodology -file top_module_methodology_drc_routed.rpt -pb top_module_methodology_drc_routed.pb -rpx top_module_methodology_drc_routed.rpx
 | Design       : top_module
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 167
+             Checks found: 135
 +-----------+------------------+----------------------------------------------------+--------+
 | Rule      | Severity         | Description                                        | Checks |
 +-----------+------------------+----------------------------------------------------+--------+
@@ -32,7 +32,7 @@ Table of Contents
 | TIMING-7  | Critical Warning | No common node between related clocks              | 1      |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1      |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 44     |
-| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 44     |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 12     |
 | SYNTH-6   | Warning          | Timing of a RAM block might be sub-optimal         | 1      |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1      |
 | TIMING-10 | Warning          | Missing property on synchronizer                   | 1      |
@@ -886,222 +886,62 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[0] in site SLICE_X28Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][0] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X28Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[10] in site SLICE_X29Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][10] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X30Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[11] in site SLICE_X31Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][11] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X32Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[12] in site SLICE_X33Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][12] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X34Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[13] in site SLICE_X32Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][13] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X31Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[14] in site SLICE_X30Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][14] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X33Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[15] in site SLICE_X33Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][15] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X31Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[16] in site SLICE_X34Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][16] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X30Y123 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[17] in site SLICE_X26Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][17] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X28Y120 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[18] in site SLICE_X26Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][18] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X30Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[19] in site SLICE_X27Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][19] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X29Y121 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[1] in site SLICE_X28Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][1] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#13 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[20] in site SLICE_X28Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][20] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#14 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[21] in site SLICE_X24Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][21] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#15 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[22] in site SLICE_X35Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][22] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#16 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[23] in site SLICE_X24Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][23] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#17 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[24] in site SLICE_X25Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][24] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#18 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[25] in site SLICE_X27Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][25] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#19 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[26] in site SLICE_X25Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][26] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#20 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[27] in site SLICE_X26Y36 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][27] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#21 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[28] in site SLICE_X32Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][28] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#22 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[29] in site SLICE_X31Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][29] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#23 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[2] in site SLICE_X29Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][2] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#24 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[30] in site SLICE_X30Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][30] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#25 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[31] in site SLICE_X22Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][31] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#26 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[3] in site SLICE_X31Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][3] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#27 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[4] in site SLICE_X26Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][4] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#28 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[5] in site SLICE_X32Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][5] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#29 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[6] in site SLICE_X33Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][6] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#30 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[7] in site SLICE_X31Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][7] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#31 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[8] in site SLICE_X35Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][8] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#32 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.lite_rdata_cdc_from_reg[9] in site SLICE_X36Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_READ.REG_DATA2LITE_CLOCK/syncstages_ff_reg[0][9] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#33 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X29Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#34 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X33Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#35 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X34Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#36 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X32Y115 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#37 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X33Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#38 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X30Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#39 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X29Y114 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#40 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X28Y118 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#41 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X32Y117 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#42 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X28Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#43 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X31Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
-Related violations: <none>
-
-PDRC-190#44 Warning
-Suboptimally placed synchronized register chain  
-The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X29Y116 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X29Y119 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-6#1 Warning
@@ -1391,7 +1231,7 @@ Related violations: <none>
 
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 1410 control sets (vs. available limit of 15850, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 1322 control sets (vs. available limit of 15850, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCB-5#1 Warning

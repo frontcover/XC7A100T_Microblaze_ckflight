@@ -4,8 +4,9 @@
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
 -- Date        : Sat Aug  9 12:03:27 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
--- Command     : write_vhdl -force -mode funcsim
---               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_13/microblaze_microblaze_0_axi_periph_imp_auto_pc_13_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_microblaze_0_axi_periph_imp_auto_pc_13 -prefix
+--               microblaze_microblaze_0_axi_periph_imp_auto_pc_13_
+--               microblaze_microblaze_0_axi_periph_imp_auto_pc_13_sim_netlist.vhdl
 -- Design      : microblaze_microblaze_0_axi_periph_imp_auto_pc_13
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -144,8 +145,6 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_pc_13_axi_protocol_converter_
   attribute C_TRANSLATION_MODE of microblaze_microblaze_0_axi_periph_imp_auto_pc_13_axi_protocol_converter_v2_1_36_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_pc_13_axi_protocol_converter_v2_1_36_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_pc_13_axi_protocol_converter_v2_1_36_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_36_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of microblaze_microblaze_0_axi_periph_imp_auto_pc_13_axi_protocol_converter_v2_1_36_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
