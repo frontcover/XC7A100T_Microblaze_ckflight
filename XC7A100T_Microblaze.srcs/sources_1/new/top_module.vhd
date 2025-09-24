@@ -65,6 +65,19 @@ end top_module;
 
 architecture Behavioral of top_module is
 
+    component ila_0
+    port (
+        clk    : in  std_logic;
+        probe0 : in  std_logic_vector(1 downto 0);
+        probe1 : in  std_logic_vector(3 downto 0);
+        probe2 : in  std_logic_vector(3 downto 0);
+        probe3 : in  std_logic_vector(66 downto 0);
+        probe4 : in  std_logic_vector(11 downto 0);
+        probe5 : in  std_logic_vector(5 downto 0);
+        probe6 : in  std_logic_vector(1 downto 0)
+    );
+    end component;
+    
     component microblaze_wrapper
     port (
         DDR2_0_addr             : out STD_LOGIC_VECTOR ( 12 downto 0 );
@@ -189,6 +202,17 @@ architecture Behavioral of top_module is
     signal s_AXIS_S2MM_0_tready : std_logic;
     signal s_AXIS_S2MM_0_tvalid : std_logic;
     
+    -- Probe concatenation signals
+    signal probe0_bus : std_logic_vector(1 downto 0);
+    signal probe1_bus : std_logic_vector(3 downto 0);
+    signal probe2_bus : std_logic_vector(3 downto 0);
+    signal probe3_bus : std_logic_vector(66 downto 0);
+    signal probe4_bus : std_logic_vector(11 downto 0);
+    signal probe5_bus : std_logic_vector(5 downto 0);
+    signal probe6_bus : std_logic_vector(1 downto 0);
+    signal s_jd_gpio1_out : std_logic_vector(1 downto 0);
+
+    
 begin 
     
     reset_n              <= not RESET;      -- active low reset generation
@@ -212,6 +236,28 @@ begin
     LED17_G <= s_LED17_G;
     LED17_R <= s_LED17_R;
     
+    probe0_bus <= s_uart_tx & s_uart_rx;
+    probe1_bus <= s_spi0_mosi & s_spi0_miso & s_spi0_clk & s_spi0_cs(0);
+    probe2_bus <= s_spi1_mosi & s_spi1_miso & s_spi1_clk & s_spi1_cs(0);
+    probe3_bus <= s_AXIS_S2MM_0_tdata & s_AXIS_S2MM_0_tvalid & s_AXIS_S2MM_0_tready & s_AXIS_S2MM_0_tlast;
+    probe4_bus <= s_fifo_out & s_fifo_read_en & s_uart_start_tx & s_uart_tx_active & s_uart_tx_done;
+    probe5_bus <= s_LED16_B & s_LED16_G & s_LED16_R & s_LED17_B & s_LED17_G & s_LED17_R;
+    
+    JD_GPIO1_OUT <= s_jd_gpio1_out;
+    probe6_bus <= s_jd_gpio1_out;
+    
+    
+    ila_inst : ila_0
+    port map (
+        clk    => SYSCLK,
+        probe0 => probe0_bus,
+        probe1 => probe1_bus,
+        probe2 => probe2_bus,
+        probe3 => probe3_bus,
+        probe4 => probe4_bus,
+        probe5 => probe5_bus,
+        probe6 => probe6_bus
+    );
 
     microblaze: microblaze_wrapper
     port map (
@@ -237,7 +283,7 @@ begin
         clk_100MHz              => SYSCLK,
         clk_out3_0              => s_clk_out3_0,
         gpio_rtl_0_tri_o        => LED,
-        gpio_rtl_1_tri_o        => JD_GPIO1_OUT, 
+        gpio_rtl_1_tri_o        => s_jd_gpio1_out, 
         gpio_rtl_2_tri_i        => JD_GPIO2_IN,
         iic_rtl_0_scl_io        => I2C_SCL,
         iic_rtl_0_sda_io        => I2C_SDA,

@@ -1,24 +1,24 @@
 #-----------------------------------------------------------
 # Vivado v2025.1 (64-bit)
-# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sat Aug  9 22:29:52 2025
-# Process ID         : 305837
-# Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1
-# Command line       : vivado -log microblaze_mig_7series_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_mig_7series_0_0.tcl
-# Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1/microblaze_mig_7series_0_0.vds
-# Journal file       : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1/vivado.jou
-# Running On         : ck-MS-7E62
-# Platform           : Ubuntu
-# Operating System   : Ubuntu 25.04
-# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5604.631 MHz
-# CPU Physical cores : 16
-# CPU Logical cores  : 32
-# Host memory        : 63756 MB
-# Swap memory        : 8589 MB
-# Total Virtual      : 72346 MB
-# Available Virtual  : 59519 MB
+# Start of session at: Wed Sep 24 16:30:17 2025
+# Process ID         : 7220
+# Current directory  : C:/Users/CK/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1
+# Command line       : vivado.exe -log microblaze_mig_7series_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_mig_7series_0_0.tcl
+# Log file           : C:/Users/CK/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1/microblaze_mig_7series_0_0.vds
+# Journal file       : C:/Users/CK/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1\vivado.jou
+# Running On         : DESKTOP-BEUFM6D
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-4850HQ CPU @ 2.30GHz
+# CPU Frequency      : 2295 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 17083 MB
+# Swap memory        : 2550 MB
+# Total Virtual      : 19633 MB
+# Available Virtual  : 8868 MB
 #-----------------------------------------------------------
 source microblaze_mig_7series_0_0.tcl -notrace

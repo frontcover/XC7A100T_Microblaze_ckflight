@@ -1,30 +1,15 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="106219" HostCore="32" HostMemory="62262264">
+    <Process Command="vivado.bat" Owner="CK" Host="DESKTOP-BEUFM6D" Pid="13068" HostCore="8" HostMemory="017083637760">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="169397" HostCore="32" HostMemory="62262264">
+    <Process Command="vivado.bat" Owner="CK" Host="DESKTOP-BEUFM6D" Pid="12052" HostCore="8" HostMemory="017083637760">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="174121" HostCore="32" HostMemory="62262264">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="307449" HostCore="32" HostMemory="62262264">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="380962" HostCore="32" HostMemory="62262264">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="447116" HostCore="32" HostMemory="62262264">
+    <Process Command="vivado.bat" Owner="CK" Host="DESKTOP-BEUFM6D" Pid="7128" HostCore="8" HostMemory="017083637760">
     </Process>
 </ProcessHandle>
