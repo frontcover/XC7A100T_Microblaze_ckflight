@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Wed Sep 24 16:38:08 2025
-| Host         : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Sat Sep 27 12:24:57 2025
+| Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command      : report_drc -file top_module_drc_opted.rpt -pb top_module_drc_opted.pb -rpx top_module_drc_opted.rpx
 | Design       : top_module
 | Device       : xc7a100tcsg324-1
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max checks: <unlimited>
-             Checks found: 11
+             Checks found: 8
 +-----------+----------+-----------------------------------------------------+--------+
 | Rule      | Severity | Description                                         | Checks |
 +-----------+----------+-----------------------------------------------------+--------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1      |
-| PLIO-6    | Warning  | Placement Constraints Check for IO constraints      | 2      |
-| REQP-1617 | Warning  | use_IOB_register                                    | 4      |
+| PLIO-6    | Warning  | Placement Constraints Check for IO constraints      | 1      |
+| REQP-1617 | Warning  | use_IOB_register                                    | 2      |
 | REQP-1709 | Warning  | Clock output buffering                              | 1      |
 | REQP-165  | Advisory | writefirst                                          | 2      |
 | REQP-181  | Advisory | writefirst                                          | 1      |
@@ -56,11 +56,6 @@ Placement Constraints Check for IO constraints
 Invalid constraint on register microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
 Related violations: <none>
 
-PLIO-6#2 Warning
-Placement Constraints Check for IO constraints  
-Invalid constraint on register microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG. It has the property IOB=TRUE, but it is not driving or driven by any IO element.
-Related violations: <none>
-
 REQP-1617#1 Warning
 use_IOB_register  
 The FDRE cell microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
@@ -69,16 +64,6 @@ Related violations: <none>
 REQP-1617#2 Warning
 use_IOB_register  
 The FDRE cell microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
-Related violations: <none>
-
-REQP-1617#3 Warning
-use_IOB_register  
-The FDRE cell microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
-Related violations: <none>
-
-REQP-1617#4 Warning
-use_IOB_register  
-The FDRE cell microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/RATIO_NOT_EQUAL_4_GENERATE.SCK_O_NQ_4_NO_STARTUP_USED.SCK_O_NE_4_FDRE_INST has IOB set to TRUE, but does not connect directly to an IO cell. Remove the constraint or ensure the FDRE is properly connected to an IO.
 Related violations: <none>
 
 REQP-1709#1 Warning

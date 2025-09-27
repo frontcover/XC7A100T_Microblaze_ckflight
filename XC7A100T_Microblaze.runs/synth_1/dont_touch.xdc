@@ -27,8 +27,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/microblaze_microblaze_0_axi_periph_imp_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_xbar_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_xbar_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_13/microblaze_microblaze_0_axi_periph_imp_auto_pc_13.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_13 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_13} -quiet] -quiet
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_12/microblaze_microblaze_0_axi_periph_imp_auto_pc_12.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12} -quiet] -quiet
 
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0} -quiet] -quiet
@@ -93,26 +93,20 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_9/microblaze_microblaze_0_axi_periph_imp_auto_pc_9.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_9 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_9} -quiet] -quiet
 
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_cc_0/microblaze_microblaze_0_axi_periph_imp_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0} -quiet] -quiet
+
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_10/microblaze_microblaze_0_axi_periph_imp_auto_ds_10.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10} -quiet] -quiet
 
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_10/microblaze_microblaze_0_axi_periph_imp_auto_pc_10.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_10 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_10} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_cc_0/microblaze_microblaze_0_axi_periph_imp_auto_cc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0} -quiet] -quiet
-
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_11/microblaze_microblaze_0_axi_periph_imp_auto_ds_11.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11} -quiet] -quiet
 
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_11/microblaze_microblaze_0_axi_periph_imp_auto_pc_11.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_11 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_11} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_12/microblaze_microblaze_0_axi_periph_imp_auto_ds_12.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_12 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_12} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_12/microblaze_microblaze_0_axi_periph_imp_auto_pc_12.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12} -quiet] -quiet
 
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_0/microblaze_microblaze_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_0} -quiet] -quiet
@@ -144,9 +138,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_quad_spi_0_0 || ORIG_REF_NAME==microblaze_axi_quad_spi_0_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_quad_spi_1_0 || ORIG_REF_NAME==microblaze_axi_quad_spi_1_0} -quiet] -quiet
-
 # IP: bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_uartlite_0_0 || ORIG_REF_NAME==microblaze_axi_uartlite_0_0} -quiet] -quiet
 
@@ -171,4 +162,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_axi_dma_0_0/microblaze_axi_dma_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_dma_0_0 || ORIG_REF_NAME==microblaze_axi_dma_0_0} -quiet] -quiet
 
-# XDC: c:/Users/CK/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc
+# IP: ip/ila_0/ila_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ila_0 || ORIG_REF_NAME==ila_0} -quiet] -quiet
+
+# XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc

@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3CF7030003FA1B3E",
+      "boundary_crc": "0x6CDDD5E25F2C490",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze",
       "name": "microblaze",
@@ -52,10 +52,7 @@
           "auto_ds": "",
           "auto_pc": ""
         },
-        "m06_couplers": {
-          "auto_ds": "",
-          "auto_pc": ""
-        },
+        "m06_couplers": {},
         "m07_couplers": {
           "auto_ds": "",
           "auto_pc": ""
@@ -93,7 +90,6 @@
       "axi_gpio_1": "",
       "axi_gpio_2": "",
       "axi_quad_spi_0": "",
-      "axi_quad_spi_1": "",
       "axi_uartlite_0": "",
       "axi_timer_0": "",
       "axi_iic_0": "",
@@ -445,20 +441,6 @@
             "value": "ACTIVE_LOW"
           }
         }
-      },
-      "spi1_mosi": {
-        "direction": "O"
-      },
-      "spi1_miso": {
-        "direction": "I"
-      },
-      "spi1_sck": {
-        "direction": "O"
-      },
-      "spi1_cs": {
-        "direction": "O",
-        "left": "0",
-        "right": "0"
       },
       "spi0_mosi": {
         "direction": "O"
@@ -1590,8 +1572,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_13",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_13/microblaze_microblaze_0_axi_periph_imp_auto_pc_13.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_12",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_12/microblaze_microblaze_0_axi_periph_imp_auto_pc_12.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/s00_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -2958,127 +2940,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_ds": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_6",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_6/microblaze_microblaze_0_axi_periph_imp_auto_ds_6.xci",
-                "inst_hier_path": "microblaze_0_axi_periph/m06_couplers/auto_ds",
-                "has_run_ip_tcl": "true",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "32"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "64"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "bd_attributes": {
-                      "BRIDGES": {
-                        "value": "M_AXI",
-                        "value_src": "auto"
-                      },
-                      "TYPE": {
-                        "value": "interior",
-                        "value_src": "default"
-                      }
-                    },
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  },
-                  "M_AXI": {
-                    "bd_attributes": {
-                      "TYPE": {
-                        "value": "interior",
-                        "value_src": "default"
-                      }
-                    }
-                  }
-                }
-              },
-              "auto_pc": {
-                "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
-                "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_6",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_6/microblaze_microblaze_0_axi_periph_imp_auto_pc_6.xci",
-                "inst_hier_path": "microblaze_0_axi_periph/m06_couplers/auto_pc",
-                "has_run_ip_tcl": "true",
-                "parameters": {
-                  "MI_PROTOCOL": {
-                    "value": "AXI4LITE"
-                  },
-                  "SI_PROTOCOL": {
-                    "value": "AXI4"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "bd_attributes": {
-                      "BRIDGES": {
-                        "value": "M_AXI",
-                        "value_src": "auto"
-                      },
-                      "TYPE": {
-                        "value": "interior",
-                        "value_src": "default"
-                      }
-                    },
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  },
-                  "M_AXI": {
-                    "bd_attributes": {
-                      "TYPE": {
-                        "value": "interior",
-                        "value_src": "default"
-                      }
-                    }
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_ds_to_auto_pc": {
-                "interface_ports": [
-                  "auto_ds/M_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
-              "auto_pc_to_m06_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
-              "m06_couplers_to_auto_ds": {
+              "m06_couplers_to_m06_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_ds/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_ds/s_axi_aclk",
-                  "auto_pc/aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_ds/s_axi_aresetn",
-                  "auto_pc/aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -3134,8 +3000,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_7",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_7/microblaze_microblaze_0_axi_periph_imp_auto_ds_7.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_6",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_6/microblaze_microblaze_0_axi_periph_imp_auto_ds_6.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m07_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3177,8 +3043,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_7",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_7/microblaze_microblaze_0_axi_periph_imp_auto_pc_7.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_6",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_6/microblaze_microblaze_0_axi_periph_imp_auto_pc_6.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m07_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3306,8 +3172,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_8",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_8/microblaze_microblaze_0_axi_periph_imp_auto_ds_8.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_7",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_7/microblaze_microblaze_0_axi_periph_imp_auto_ds_7.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m08_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3349,8 +3215,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_8",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_8/microblaze_microblaze_0_axi_periph_imp_auto_pc_8.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_7",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_7/microblaze_microblaze_0_axi_periph_imp_auto_pc_7.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m08_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3478,8 +3344,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_9",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_9/microblaze_microblaze_0_axi_periph_imp_auto_ds_9.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_8",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_8/microblaze_microblaze_0_axi_periph_imp_auto_ds_8.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m09_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3521,8 +3387,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_9",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_9/microblaze_microblaze_0_axi_periph_imp_auto_pc_9.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_8",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_8/microblaze_microblaze_0_axi_periph_imp_auto_pc_8.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m09_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3650,8 +3516,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_10",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_10/microblaze_microblaze_0_axi_periph_imp_auto_ds_10.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_9",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_9/microblaze_microblaze_0_axi_periph_imp_auto_ds_9.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m10_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3693,8 +3559,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_10",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_10/microblaze_microblaze_0_axi_periph_imp_auto_pc_10.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_9",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_9/microblaze_microblaze_0_axi_periph_imp_auto_pc_9.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m10_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3947,8 +3813,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_11",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_11/microblaze_microblaze_0_axi_periph_imp_auto_ds_11.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_10",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_10/microblaze_microblaze_0_axi_periph_imp_auto_ds_10.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m12_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -3990,8 +3856,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_11",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_11/microblaze_microblaze_0_axi_periph_imp_auto_pc_11.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_10",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_10/microblaze_microblaze_0_axi_periph_imp_auto_pc_10.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m12_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -4119,8 +3985,8 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_12",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_12/microblaze_microblaze_0_axi_periph_imp_auto_ds_12.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_11",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_11/microblaze_microblaze_0_axi_periph_imp_auto_ds_11.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m13_couplers/auto_ds",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -4162,8 +4028,8 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "ip_revision": "36",
-                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_12",
-                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_12/microblaze_microblaze_0_axi_periph_imp_auto_pc_12.xci",
+                "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_pc_11",
+                "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_11/microblaze_microblaze_0_axi_periph_imp_auto_pc_11.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m13_couplers/auto_pc",
                 "has_run_ip_tcl": "true",
                 "parameters": {
@@ -4899,22 +4765,6 @@
           }
         }
       },
-      "axi_quad_spi_1": {
-        "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
-        "ip_revision": "34",
-        "xci_name": "microblaze_axi_quad_spi_1_0",
-        "xci_path": "ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0.xci",
-        "inst_hier_path": "axi_quad_spi_1",
-        "has_run_ip_tcl": "true",
-        "parameters": {
-          "C_SCK_RATIO": {
-            "value": "8"
-          },
-          "C_USE_STARTUP": {
-            "value": "0"
-          }
-        }
-      },
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "39",
@@ -5185,12 +5035,6 @@
           "axi_quad_spi_0/AXI_LITE"
         ]
       },
-      "microblaze_0_axi_periph_M06_AXI": {
-        "interface_ports": [
-          "microblaze_0_axi_periph/M06_AXI",
-          "axi_quad_spi_1/AXI_LITE"
-        ]
-      },
       "microblaze_0_axi_periph_M07_AXI": {
         "interface_ports": [
           "microblaze_0_axi_periph/M07_AXI",
@@ -5313,24 +5157,6 @@
           "spi0_cs"
         ]
       },
-      "axi_quad_spi_1_io0_o": {
-        "ports": [
-          "axi_quad_spi_1/io0_o",
-          "spi1_mosi"
-        ]
-      },
-      "axi_quad_spi_1_sck_o": {
-        "ports": [
-          "axi_quad_spi_1/sck_o",
-          "spi1_sck"
-        ]
-      },
-      "axi_quad_spi_1_ss_o": {
-        "ports": [
-          "axi_quad_spi_1/ss_o",
-          "spi1_cs"
-        ]
-      },
       "clk_100MHz_1": {
         "ports": [
           "clk_100MHz",
@@ -5353,12 +5179,6 @@
         "ports": [
           "clk_wiz_1/locked",
           "rst_clk_wiz_1_100M/dcm_locked"
-        ]
-      },
-      "io1_i_0_1": {
-        "ports": [
-          "spi1_miso",
-          "axi_quad_spi_1/io1_i"
         ]
       },
       "io1_i_1_1": {
@@ -5395,12 +5215,10 @@
           "microblaze_0_axi_periph/M04_ACLK",
           "axi_quad_spi_0/s_axi_aclk",
           "microblaze_0_axi_periph/M05_ACLK",
-          "axi_quad_spi_1/s_axi_aclk",
           "microblaze_0_axi_periph/M06_ACLK",
           "axi_uartlite_0/s_axi_aclk",
           "microblaze_0_axi_periph/M07_ACLK",
           "axi_quad_spi_0/ext_spi_clk",
-          "axi_quad_spi_1/ext_spi_clk",
           "axi_timer_0/s_axi_aclk",
           "microblaze_0_axi_periph/M08_ACLK",
           "axi_iic_0/s_axi_aclk",
@@ -5497,7 +5315,6 @@
           "microblaze_0_axi_periph/M04_ARESETN",
           "axi_quad_spi_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M05_ARESETN",
-          "axi_quad_spi_1/s_axi_aresetn",
           "microblaze_0_axi_periph/M06_ARESETN",
           "axi_uartlite_0/s_axi_aresetn",
           "microblaze_0_axi_periph/M07_ARESETN",
@@ -5573,12 +5390,6 @@
               "SEG_axi_quad_spi_0_Reg": {
                 "address_block": "/axi_quad_spi_0/AXI_LITE/Reg",
                 "offset": "0x44A00000",
-                "range": "64K",
-                "offset_high_param": "C_HIGHADDR"
-              },
-              "SEG_axi_quad_spi_1_Reg": {
-                "address_block": "/axi_quad_spi_1/AXI_LITE/Reg",
-                "offset": "0x44A10000",
                 "range": "64K",
                 "offset_high_param": "C_HIGHADDR"
               },
@@ -5680,13 +5491,6 @@
                 "is_excluded": "TRUE",
                 "offset_high_param": "C_HIGHADDR"
               },
-              "SEG_axi_quad_spi_1_Reg": {
-                "address_block": "/axi_quad_spi_1/AXI_LITE/Reg",
-                "offset": "0x44A10000",
-                "range": "64K",
-                "is_excluded": "TRUE",
-                "offset_high_param": "C_HIGHADDR"
-              },
               "SEG_axi_timer_0_Reg": {
                 "address_block": "/axi_timer_0/S_AXI/Reg",
                 "offset": "0x41C00000",
@@ -5769,13 +5573,6 @@
                 "is_excluded": "TRUE",
                 "offset_high_param": "C_HIGHADDR"
               },
-              "SEG_axi_quad_spi_1_Reg": {
-                "address_block": "/axi_quad_spi_1/AXI_LITE/Reg",
-                "offset": "0x44A10000",
-                "range": "64K",
-                "is_excluded": "TRUE",
-                "offset_high_param": "C_HIGHADDR"
-              },
               "SEG_axi_timer_0_Reg": {
                 "address_block": "/axi_timer_0/S_AXI/Reg",
                 "offset": "0x41C00000",
@@ -5854,13 +5651,6 @@
               "SEG_axi_quad_spi_0_Reg": {
                 "address_block": "/axi_quad_spi_0/AXI_LITE/Reg",
                 "offset": "0x44A00000",
-                "range": "64K",
-                "is_excluded": "TRUE",
-                "offset_high_param": "C_HIGHADDR"
-              },
-              "SEG_axi_quad_spi_1_Reg": {
-                "address_block": "/axi_quad_spi_1/AXI_LITE/Reg",
-                "offset": "0x44A10000",
                 "range": "64K",
                 "is_excluded": "TRUE",
                 "offset_high_param": "C_HIGHADDR"

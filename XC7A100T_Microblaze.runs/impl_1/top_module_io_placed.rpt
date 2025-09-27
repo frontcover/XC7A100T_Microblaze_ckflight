@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date                      : Wed Sep 24 16:40:27 2025
-| Host                      : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
+| Tool Version              : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date                      : Sat Sep 27 12:25:27 2025
+| Host                      : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command                   : report_io -file top_module_io_placed.rpt
 | Design                    : top_module
 | Device                    : xc7a100t
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           104 |
+|           100 |
 +---------------+
 
 
@@ -130,7 +130,7 @@ Table of Contents
 | F3         |                 | High Range | IO_L13N_T2_MRCC_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | F4         |                 | High Range | IO_L13P_T2_MRCC_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | F5         |                 | High Range | IO_0_35                      | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| F6         | JC2_SPI1_MISO   | High Range | IO_L19N_T3_VREF_35           | INPUT       | LVCMOS33       |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| F6         |                 | High Range | IO_L19N_T3_VREF_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | F7         |                 |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
 | F8         |                 |            | VCCINT                       | VCCINT      |                |         |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | F9         |                 |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
@@ -148,7 +148,7 @@ Table of Contents
 | G3         | JD_GPIO2_IN[1]  | High Range | IO_L20N_T3_35                | INPUT       | LVCMOS33       |      35 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |          | NONE             |              |                   |              |
 | G4         | JD8_I2C_SDA     | High Range | IO_L20P_T3_35                | BIDIR       | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | G5         |                 | High Range | VCCO_35                      | VCCO        |                |      35 |            |      |                     |                      |    3.30 |            |           |          |          |                  |              |                   |              |
-| G6         | JC4_SPI1_CS[0]  | High Range | IO_L19P_T3_35                | OUTPUT      | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| G6         |                 | High Range | IO_L19P_T3_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | G7         |                 |            | VCCINT                       | VCCINT      |                |         |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | G8         |                 |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
 | G9         |                 |            | VCCINT                       | VCCINT      |                |         |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
@@ -180,7 +180,7 @@ Table of Contents
 | H17        | LED[0]          | High Range | IO_L18P_T2_A24_15            | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | H18        |                 | High Range | VCCO_15                      | VCCO        |                |      15 |            |      |                     |                      |    3.30 |            |           |          |          |                  |              |                   |              |
 | J1         |                 | High Range | VCCO_35                      | VCCO        |                |      35 |            |      |                     |                      |    3.30 |            |           |          |          |                  |              |                   |              |
-| J2         | JC3_SPI1_CLK    | High Range | IO_L22N_T3_35                | OUTPUT      | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| J2         |                 | High Range | IO_L22N_T3_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | J3         |                 | High Range | IO_L22P_T3_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | J4         |                 | High Range | IO_L21P_T3_DQS_35            | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | J5         |                 | High Range | IO_25_35                     | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
@@ -197,7 +197,7 @@ Table of Contents
 | J16        |                 |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
 | J17        | AN[0]           | High Range | IO_L23P_T3_FOE_B_15          | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | J18        | AN[1]           | High Range | IO_L23N_T3_FWE_B_15          | OUTPUT      | LVCMOS33       |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
-| K1         | JC1_SPI1_MOSI   | High Range | IO_L23N_T3_35                | OUTPUT      | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| K1         |                 | High Range | IO_L23N_T3_35                | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | K2         | AN[6]           | High Range | IO_L23P_T3_35                | OUTPUT      | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | K3         |                 | High Range | IO_L2P_T0_34                 | User IO     |                |      34 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | K4         |                 | High Range | VCCO_34                      | VCCO        |                |      34 |            |      |                     |                      |    1.80 |            |           |          |          |                  |              |                   |              |

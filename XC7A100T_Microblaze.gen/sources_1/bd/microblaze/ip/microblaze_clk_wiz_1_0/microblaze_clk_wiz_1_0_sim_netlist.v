@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
 // Date        : Sat Aug  9 12:03:25 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
-// Command     : write_verilog -force -mode funcsim
-//               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top microblaze_clk_wiz_1_0 -prefix
+//               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_sim_netlist.v
 // Design      : microblaze_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,7 +35,7 @@ module microblaze_clk_wiz_1_0
   wire locked;
   wire reset;
 
-  microblaze_clk_wiz_1_0_clk_wiz inst
+  microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .clk_out2(clk_out2),
@@ -44,7 +44,7 @@ module microblaze_clk_wiz_1_0
         .reset(reset));
 endmodule
 
-module microblaze_clk_wiz_1_0_clk_wiz
+module microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz
    (clk_out1,
     clk_out2,
     clk_out3,

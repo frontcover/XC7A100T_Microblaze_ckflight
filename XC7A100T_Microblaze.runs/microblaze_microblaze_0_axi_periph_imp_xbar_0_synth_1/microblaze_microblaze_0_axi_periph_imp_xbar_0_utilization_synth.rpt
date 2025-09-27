@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Sat Aug  9 22:30:12 2025
+| Date         : Sat Sep 27 11:24:52 2025
 | Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file microblaze_microblaze_0_axi_periph_imp_xbar_0_utilization_synth.rpt -pb microblaze_microblaze_0_axi_periph_imp_xbar_0_utilization_synth.pb
 | Design       : microblaze_microblaze_0_axi_periph_imp_xbar_0
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 1121 |     0 |          0 |     63400 |  1.77 |
-|   LUT as Logic          | 1121 |     0 |          0 |     63400 |  1.77 |
+| Slice LUTs*             | 1111 |     0 |          0 |     63400 |  1.75 |
+|   LUT as Logic          | 1111 |     0 |          0 |     63400 |  1.75 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |  262 |     0 |          0 |    126800 |  0.21 |
-|   Register as Flip Flop |  262 |     0 |          0 |    126800 |  0.21 |
+| Slice Registers         |  261 |     0 |          0 |    126800 |  0.21 |
+|   Register as Flip Flop |  261 |     0 |          0 |    126800 |  0.21 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -60,7 +60,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 260   |          Yes |       Reset |            - |
+| 259   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,14 +149,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  779 |                 LUT |
-| FDRE     |  260 |        Flop & Latch |
-| LUT5     |  237 |                 LUT |
-| LUT2     |   70 |                 LUT |
-| LUT4     |   63 |                 LUT |
-| LUT3     |   55 |                 LUT |
+| LUT6     |  774 |                 LUT |
+| FDRE     |  259 |        Flop & Latch |
+| LUT5     |  238 |                 LUT |
+| LUT2     |   66 |                 LUT |
+| LUT3     |   56 |                 LUT |
+| LUT4     |   53 |                 LUT |
+| LUT1     |    3 |                 LUT |
 | FDSE     |    2 |        Flop & Latch |
-| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

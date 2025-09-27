@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Sat Aug  9 22:29:36 2025
+--Date        : Sat Sep 27 11:24:14 2025
 --Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze_wrapper.bd
 --Design      : microblaze_wrapper
@@ -47,10 +47,6 @@ entity microblaze_wrapper is
     spi0_miso : in STD_LOGIC;
     spi0_mosi : out STD_LOGIC;
     spi0_sck : out STD_LOGIC;
-    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    spi1_miso : in STD_LOGIC;
-    spi1_mosi : out STD_LOGIC;
-    spi1_sck : out STD_LOGIC;
     uart_rtl_0_rxd : in STD_LOGIC;
     uart_rtl_0_txd : out STD_LOGIC
   );
@@ -90,21 +86,17 @@ architecture STRUCTURE of microblaze_wrapper is
     DDR2_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR2_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
-    reset_rtl_0 : in STD_LOGIC;
-    spi1_mosi : out STD_LOGIC;
-    spi1_miso : in STD_LOGIC;
-    spi1_sck : out STD_LOGIC;
-    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    spi0_mosi : out STD_LOGIC;
-    spi0_miso : in STD_LOGIC;
-    spi0_sck : out STD_LOGIC;
-    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_100MHz : in STD_LOGIC;
     S_AXIS_S2MM_0_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     S_AXIS_S2MM_0_tkeep : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S_AXIS_S2MM_0_tlast : in STD_LOGIC;
     S_AXIS_S2MM_0_tready : out STD_LOGIC;
     S_AXIS_S2MM_0_tvalid : in STD_LOGIC;
+    reset_rtl_0 : in STD_LOGIC;
+    spi0_mosi : out STD_LOGIC;
+    spi0_miso : in STD_LOGIC;
+    spi0_sck : out STD_LOGIC;
+    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    clk_100MHz : in STD_LOGIC;
     clk_out3_0 : out STD_LOGIC
   );
   end component microblaze;
@@ -200,10 +192,6 @@ microblaze_i: component microblaze
       spi0_miso => spi0_miso,
       spi0_mosi => spi0_mosi,
       spi0_sck => spi0_sck,
-      spi1_cs(0) => spi1_cs(0),
-      spi1_miso => spi1_miso,
-      spi1_mosi => spi1_mosi,
-      spi1_sck => spi1_sck,
       uart_rtl_0_rxd => uart_rtl_0_rxd,
       uart_rtl_0_txd => uart_rtl_0_txd
     );

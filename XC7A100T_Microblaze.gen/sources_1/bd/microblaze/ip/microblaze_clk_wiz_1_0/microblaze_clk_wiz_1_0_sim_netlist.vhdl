@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
 -- Date        : Sat Aug  9 12:03:25 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
--- Command     : write_vhdl -force -mode funcsim
---               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_clk_wiz_1_0 -prefix
+--               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : microblaze_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,7 +15,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_clk_wiz_1_0_clk_wiz is
+entity microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
@@ -24,9 +24,9 @@ entity microblaze_clk_wiz_1_0_clk_wiz is
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end microblaze_clk_wiz_1_0_clk_wiz;
+end microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz;
 
-architecture STRUCTURE of microblaze_clk_wiz_1_0_clk_wiz is
+architecture STRUCTURE of microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz is
   signal clk_in1_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out1_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out2_microblaze_clk_wiz_1_0 : STD_LOGIC;
@@ -195,7 +195,7 @@ end microblaze_clk_wiz_1_0;
 
 architecture STRUCTURE of microblaze_clk_wiz_1_0 is
 begin
-inst: entity work.microblaze_clk_wiz_1_0_clk_wiz
+inst: entity work.microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,

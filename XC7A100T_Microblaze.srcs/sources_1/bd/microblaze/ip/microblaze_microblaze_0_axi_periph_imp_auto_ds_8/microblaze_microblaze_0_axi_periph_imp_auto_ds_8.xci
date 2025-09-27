@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "microblaze_microblaze_0_axi_periph_imp_auto_ds_8",
-    "cell_name": "microblaze_0_axi_periph/m08_couplers/auto_ds",
+    "cell_name": "microblaze_0_axi_periph/m09_couplers/auto_ds",
     "component_reference": "xilinx.com:ip:axi_dwidth_converter:2.1",
     "ip_revision": "36",
     "gen_directory": "../../../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_8",

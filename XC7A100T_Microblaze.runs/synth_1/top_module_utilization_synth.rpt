@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Wed Sep 24 16:35:03 2025
-| Host         : DESKTOP-BEUFM6D running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Sat Sep 27 12:23:42 2025
+| Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
 | Design       : top_module
 | Device       : xc7a100tcsg324-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  146 |     0 |          0 |     63400 |  0.23 |
-|   LUT as Logic          |  146 |     0 |          0 |     63400 |  0.23 |
+| Slice LUTs*             |  206 |     0 |          0 |     63400 |  0.32 |
+|   LUT as Logic          |  206 |     0 |          0 |     63400 |  0.32 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |  214 |     0 |          0 |    126800 |  0.17 |
-|   Register as Flip Flop |  214 |     0 |          0 |    126800 |  0.17 |
+| Slice Registers         |  150 |     0 |          0 |    126800 |  0.12 |
+|   Register as Flip Flop |  150 |     0 |          0 |    126800 |  0.12 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    1 |     0 |          0 |     31700 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 72    |          Yes |           - |        Reset |
+| 8     |          Yes |           - |        Reset |
 | 5     |          Yes |         Set |            - |
 | 137   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -94,7 +94,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   58 |     0 |          0 |       210 | 27.62 |
+| Bonded IOB                  |   54 |     0 |          0 |       210 | 25.71 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -151,15 +151,15 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  137 |        Flop & Latch |
-| FDCE     |   72 |        Flop & Latch |
+| LUT1     |   74 |                 LUT |
 | LUT6     |   62 |                 LUT |
-| OBUF     |   47 |                  IO |
+| OBUF     |   44 |                  IO |
 | LUT5     |   36 |                 LUT |
 | LUT4     |   31 |                 LUT |
-| LUT3     |   23 |                 LUT |
 | LUT2     |   23 |                 LUT |
-| LUT1     |   13 |                 LUT |
-| IBUF     |   10 |                  IO |
+| LUT3     |   22 |                 LUT |
+| IBUF     |    9 |                  IO |
+| FDCE     |    8 |        Flop & Latch |
 | CARRY4   |    8 |          CarryLogic |
 | OBUFT    |    5 |                  IO |
 | FDSE     |    5 |        Flop & Latch |
@@ -187,7 +187,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_4  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_3  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_2  |    1 |
-| microblaze_microblaze_0_axi_periph_imp_auto_pc_13 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_12 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_11 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_10 |    1 |
@@ -201,7 +200,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_4  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_3  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_2  |    1 |
-| microblaze_microblaze_0_axi_periph_imp_auto_ds_12 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_11 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_10 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_1  |    1 |
@@ -218,7 +216,6 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_clk_wiz_1_0                            |    1 |
 | microblaze_axi_uartlite_0_0                       |    1 |
 | microblaze_axi_timer_0_0                          |    1 |
-| microblaze_axi_quad_spi_1_0                       |    1 |
 | microblaze_axi_quad_spi_0_0                       |    1 |
 | microblaze_axi_iic_1_0                            |    1 |
 | microblaze_axi_iic_0_0                            |    1 |

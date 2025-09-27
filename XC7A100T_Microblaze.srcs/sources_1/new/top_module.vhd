@@ -2,6 +2,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity top_module is
     Port ( 
@@ -17,11 +19,6 @@ entity top_module is
         
         SEG                  : out std_logic_vector(7 downto 0);
         AN                   : out std_logic_vector(7 downto 0);
-        
-        JC1_SPI1_MOSI        : out std_logic;
-        JC2_SPI1_MISO        : in std_logic;
-        JC3_SPI1_CLK         : out std_logic;
-        JC4_SPI1_CS          : out std_logic_vector(0 to 0);
                 
         USB_UART_TX          : out std_logic; -- connected to ft2232h's uart rxd pin on board
         
@@ -67,14 +64,11 @@ architecture Behavioral of top_module is
 
     component ila_0
     port (
-        clk    : in  std_logic;
-        probe0 : in  std_logic_vector(1 downto 0);
-        probe1 : in  std_logic_vector(3 downto 0);
-        probe2 : in  std_logic_vector(3 downto 0);
-        probe3 : in  std_logic_vector(66 downto 0);
-        probe4 : in  std_logic_vector(11 downto 0);
-        probe5 : in  std_logic_vector(5 downto 0);
-        probe6 : in  std_logic_vector(1 downto 0)
+        clk    : in  std_logic;  
+        probe0 : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+        probe1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+        probe2 : IN STD_LOGIC_VECTOR(66 DOWNTO 0);
+        probe3 : IN STD_LOGIC_VECTOR(11 DOWNTO 0)
     );
     end component;
     
@@ -113,10 +107,6 @@ architecture Behavioral of top_module is
         spi0_miso               : in STD_LOGIC;
         spi0_mosi               : out STD_LOGIC;
         spi0_sck                : out STD_LOGIC;
-        spi1_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi1_miso               : in STD_LOGIC;
-        spi1_mosi               : out STD_LOGIC;
-        spi1_sck                : out STD_LOGIC;
         uart_rtl_0_rxd          : in STD_LOGIC;
         uart_rtl_0_txd          : out std_logic 
     );
@@ -180,11 +170,6 @@ architecture Behavioral of top_module is
     signal s_spi0_miso          : std_logic;
     signal s_spi0_clk           : std_logic;
     signal s_spi0_cs            : std_logic_vector(0 to 0);
-    
-    signal s_spi1_mosi          : std_logic;
-    signal s_spi1_miso          : std_logic;
-    signal s_spi1_clk           : std_logic;
-    signal s_spi1_cs            : std_logic_vector(0 to 0);
       
     signal s_LED16_B            : std_logic := '0';
     signal s_LED16_G            : std_logic := '0';
@@ -202,26 +187,20 @@ architecture Behavioral of top_module is
     signal s_AXIS_S2MM_0_tready : std_logic;
     signal s_AXIS_S2MM_0_tvalid : std_logic;
     
-    -- Probe concatenation signals
-    signal probe0_bus : std_logic_vector(1 downto 0);
-    signal probe1_bus : std_logic_vector(3 downto 0);
-    signal probe2_bus : std_logic_vector(3 downto 0);
-    signal probe3_bus : std_logic_vector(66 downto 0);
-    signal probe4_bus : std_logic_vector(11 downto 0);
-    signal probe5_bus : std_logic_vector(5 downto 0);
-    signal probe6_bus : std_logic_vector(1 downto 0);
+
     signal s_jd_gpio1_out : std_logic_vector(1 downto 0);
+
+    signal s_probe0 : std_logic_vector(4 downto 0);
+    signal s_probe1 : std_logic_vector(3 downto 0);
+    signal s_probe2 : std_logic_vector(66 downto 0);
+    signal s_probe3 : std_logic_vector(11 downto 0);
 
     
 begin 
     
+     
     reset_n              <= not RESET;      -- active low reset generation
     USB_UART_TX          <= s_uart_tx;       -- send tx data sent from microblaze to nexy4 onboard f
-    
-    JC1_SPI1_MOSI        <= s_spi1_mosi;
-    s_spi1_miso          <= JC2_SPI1_MISO;
-    JC3_SPI1_CLK         <= s_spi1_clk;
-    JC4_SPI1_CS          <= s_spi1_cs;
     
     SPI0_MOSI            <= s_spi0_mosi;
     s_spi0_miso          <= SPI0_MISO;
@@ -236,29 +215,46 @@ begin
     LED17_G <= s_LED17_G;
     LED17_R <= s_LED17_R;
     
-    probe0_bus <= s_uart_tx & s_uart_rx;
-    probe1_bus <= s_spi0_mosi & s_spi0_miso & s_spi0_clk & s_spi0_cs(0);
-    probe2_bus <= s_spi1_mosi & s_spi1_miso & s_spi1_clk & s_spi1_cs(0);
-    probe3_bus <= s_AXIS_S2MM_0_tdata & s_AXIS_S2MM_0_tvalid & s_AXIS_S2MM_0_tready & s_AXIS_S2MM_0_tlast;
-    probe4_bus <= s_fifo_out & s_fifo_read_en & s_uart_start_tx & s_uart_tx_active & s_uart_tx_done;
-    probe5_bus <= s_LED16_B & s_LED16_G & s_LED16_R & s_LED17_B & s_LED17_G & s_LED17_R;
     
     JD_GPIO1_OUT <= s_jd_gpio1_out;
-    probe6_bus <= s_jd_gpio1_out;
+  
     
+    -- UART
+    s_probe0(0) <= s_uart_tx;
+    s_probe0(1) <= s_uart_rx;
+    s_probe0(2) <= s_uart_start_tx;
+    s_probe0(3) <= s_uart_tx_active;
+    s_probe0(4) <= s_uart_tx_done;
+
+    -- SPI0 on board acc sensor ADXL362
+    s_probe1(0) <= s_spi0_mosi;
+    s_probe1(1) <= s_spi0_miso;
+    s_probe1(2) <= s_spi0_clk;
+    s_probe1(3) <= s_spi0_cs(0);
     
+  
+    -- AXIS
+    s_probe2(63 downto 0) <= s_AXIS_S2MM_0_tdata;
+    s_probe2(64)          <= s_AXIS_S2MM_0_tvalid;
+    s_probe2(65)          <= s_AXIS_S2MM_0_tready;
+    s_probe2(66)          <= s_AXIS_S2MM_0_tlast;
+    
+    -- FIFO + UART control
+    s_probe3(7 downto 0)   <= s_fifo_out;      -- received data
+    s_probe3(8)            <= s_fifo_read_en;
+    s_probe3(9)            <= s_uart_start_tx;
+    s_probe3(10)           <= s_uart_tx_active;
+    s_probe3(11)           <= s_uart_tx_done;
+
     ila_inst : ila_0
     port map (
         clk    => SYSCLK,
-        probe0 => probe0_bus,
-        probe1 => probe1_bus,
-        probe2 => probe2_bus,
-        probe3 => probe3_bus,
-        probe4 => probe4_bus,
-        probe5 => probe5_bus,
-        probe6 => probe6_bus
+        probe0 => s_probe0,
+        probe1 => s_probe1,
+        probe2 => s_probe2,
+        probe3 => s_probe3
     );
-
+    
     microblaze: microblaze_wrapper
     port map (
         DDR2_0_addr             => ddr2_addr,
@@ -294,10 +290,6 @@ begin
         spi0_miso               => s_spi0_miso,
         spi0_mosi               => s_spi0_mosi,
         spi0_sck                => s_spi0_clk,
-        spi1_cs                 => s_spi1_cs,
-        spi1_miso               => s_spi1_miso,
-        spi1_mosi               => s_spi1_mosi,
-        spi1_sck                => s_spi1_clk,
         uart_rtl_0_rxd          => s_uart_rx,
         uart_rtl_0_txd          => s_uart_tx
          
