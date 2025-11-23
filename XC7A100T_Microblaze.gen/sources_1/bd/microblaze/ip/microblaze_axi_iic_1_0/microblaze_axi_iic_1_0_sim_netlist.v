@@ -1,9 +1,9 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-// Date        : Fri Aug  1 10:44:37 2025
-// Host        : TPC-0073 running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:16:17 2025
+// Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_axi_iic_1_0 -prefix
 //               microblaze_axi_iic_1_0_ microblaze_axi_iic_0_0_sim_netlist.v
 // Design      : microblaze_axi_iic_0_0
@@ -3013,45 +3013,6 @@ module microblaze_axi_iic_1_0_axi_lite_ipif
 endmodule
 
 module microblaze_axi_iic_1_0_debounce
-   (Sda_clean,
-    \syncstages_ff_reg[3] ,
-    sda_i,
-    s_axi_aclk,
-    sda_rin_d1);
-  output Sda_clean;
-  output \syncstages_ff_reg[3] ;
-  input sda_i;
-  input s_axi_aclk;
-  input sda_rin_d1;
-
-  wire Sda_clean;
-  wire s_axi_aclk;
-  wire sda_i;
-  wire sda_rin_d1;
-  wire \syncstages_ff_reg[3] ;
-
-  (* DEST_SYNC_FF = "4" *) 
-  (* INIT_SYNC_FF = "0" *) 
-  (* SIM_ASSERT_CHK = "0" *) 
-  (* SRC_INPUT_REG = "0" *) 
-  (* VERSION = "0" *) 
-  (* XPM_CDC = "SINGLE" *) 
-  (* XPM_MODULE = "TRUE" *) 
-  microblaze_axi_iic_1_0_xpm_cdc_single INPUT_DOUBLE_REGS
-       (.dest_clk(s_axi_aclk),
-        .dest_out(Sda_clean),
-        .src_clk(1'b0),
-        .src_in(sda_i));
-  LUT2 #(
-    .INIT(4'h2)) 
-    detect_stop_i_3
-       (.I0(Sda_clean),
-        .I1(sda_rin_d1),
-        .O(\syncstages_ff_reg[3] ));
-endmodule
-
-(* ORIG_REF_NAME = "debounce" *) 
-module microblaze_axi_iic_1_0_debounce__xdcDup__1
    (dest_out,
     \syncstages_ff_reg[3] ,
     scl_rising_edge0,
@@ -3094,7 +3055,7 @@ module microblaze_axi_iic_1_0_debounce__xdcDup__1
   (* VERSION = "0" *) 
   (* XPM_CDC = "SINGLE" *) 
   (* XPM_MODULE = "TRUE" *) 
-  microblaze_axi_iic_1_0_xpm_cdc_single__2 INPUT_DOUBLE_REGS
+  microblaze_axi_iic_1_0_xpm_cdc_single__1 INPUT_DOUBLE_REGS
        (.dest_clk(s_axi_aclk),
         .dest_out(dest_out),
         .src_clk(1'b0),
@@ -3113,6 +3074,45 @@ module microblaze_axi_iic_1_0_debounce__xdcDup__1
        (.I0(dest_out),
         .I1(scl_rin_d1),
         .O(scl_rising_edge0));
+endmodule
+
+(* ORIG_REF_NAME = "debounce" *) 
+module microblaze_axi_iic_1_0_debounce_3
+   (Sda_clean,
+    \syncstages_ff_reg[3] ,
+    sda_i,
+    s_axi_aclk,
+    sda_rin_d1);
+  output Sda_clean;
+  output \syncstages_ff_reg[3] ;
+  input sda_i;
+  input s_axi_aclk;
+  input sda_rin_d1;
+
+  wire Sda_clean;
+  wire s_axi_aclk;
+  wire sda_i;
+  wire sda_rin_d1;
+  wire \syncstages_ff_reg[3] ;
+
+  (* DEST_SYNC_FF = "4" *) 
+  (* INIT_SYNC_FF = "0" *) 
+  (* SIM_ASSERT_CHK = "0" *) 
+  (* SRC_INPUT_REG = "0" *) 
+  (* VERSION = "0" *) 
+  (* XPM_CDC = "SINGLE" *) 
+  (* XPM_MODULE = "TRUE" *) 
+  microblaze_axi_iic_1_0_xpm_cdc_single INPUT_DOUBLE_REGS
+       (.dest_clk(s_axi_aclk),
+        .dest_out(Sda_clean),
+        .src_clk(1'b0),
+        .src_in(sda_i));
+  LUT2 #(
+    .INIT(4'h2)) 
+    detect_stop_i_3
+       (.I0(Sda_clean),
+        .I1(sda_rin_d1),
+        .O(\syncstages_ff_reg[3] ));
 endmodule
 
 module microblaze_axi_iic_1_0_dynamic_master
@@ -3475,7 +3475,7 @@ module microblaze_axi_iic_1_0_filter
   wire \syncstages_ff_reg[3] ;
   wire \syncstages_ff_reg[3]_0 ;
 
-  microblaze_axi_iic_1_0_debounce__xdcDup__1 SCL_DEBOUNCE
+  microblaze_axi_iic_1_0_debounce SCL_DEBOUNCE
        (.CO(CO),
         .D(D),
         .Q(Q),
@@ -3485,7 +3485,7 @@ module microblaze_axi_iic_1_0_filter
         .scl_rin_d1(scl_rin_d1),
         .scl_rising_edge0(scl_rising_edge0),
         .\syncstages_ff_reg[3] (\syncstages_ff_reg[3]_0 ));
-  microblaze_axi_iic_1_0_debounce SDA_DEBOUNCE
+  microblaze_axi_iic_1_0_debounce_3 SDA_DEBOUNCE
        (.Sda_clean(Sda_clean),
         .s_axi_aclk(s_axi_aclk),
         .sda_i(sda_i),
@@ -6081,7 +6081,7 @@ module microblaze_axi_iic_1_0_interrupt_control
         .R(SR));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_axi_iic_0_0,axi_iic,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_iic,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_axi_iic_0_0,axi_iic,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_iic,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_axi_iic_1_0
    (s_axi_aclk,
@@ -6114,7 +6114,7 @@ module microblaze_axi_iic_1_0
   (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_mode = "slave S_AXI_ACLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_mode = "slave S_AXI_ARESETN" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
   (* x_interface_info = "xilinx.com:signal:interrupt:1.0 INTERRUPT INTERRUPT" *) (* x_interface_mode = "master INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, PortWidth 1" *) output iic2intc_irpt;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
@@ -8483,7 +8483,7 @@ module microblaze_axi_iic_1_0_slave_attachment
   wire s_axi_awvalid;
   wire s_axi_bready;
   wire [0:0]s_axi_bresp;
-  wire s_axi_bresp_i;
+  wire [0:0]s_axi_bresp_i;
   wire \s_axi_bresp_i[1]_i_1_n_0 ;
   wire s_axi_bvalid_i_i_1_n_0;
   wire s_axi_bvalid_i_reg_0;
@@ -8544,7 +8544,7 @@ module microblaze_axi_iic_1_0_slave_attachment
   wire \s_axi_rdata_i_reg[8]_4 ;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
-  wire s_axi_rresp_i;
+  wire [0:0]s_axi_rresp_i;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_rvalid_i_reg_0;
   wire [5:0]s_axi_wdata;
@@ -10581,7 +10581,7 @@ endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
 (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
+(* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module microblaze_axi_iic_1_0_xpm_cdc_single
    (src_clk,
     src_in,
@@ -10637,8 +10637,8 @@ endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
 (* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
-module microblaze_axi_iic_1_0_xpm_cdc_single__2
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
+module microblaze_axi_iic_1_0_xpm_cdc_single__1
    (src_clk,
     src_in,
     dest_clk,

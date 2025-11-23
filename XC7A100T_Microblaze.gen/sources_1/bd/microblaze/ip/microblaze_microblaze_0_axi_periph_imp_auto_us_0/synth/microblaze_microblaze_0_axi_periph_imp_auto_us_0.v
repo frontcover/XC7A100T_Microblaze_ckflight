@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:ip:axi_dwidth_converter:2.1
-// IP Revision: 36
+// IP Revision: 37
 
-(* X_CORE_INFO = "axi_dwidth_converter_v2_1_36_top,Vivado 2025.1" *)
-(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{}" *)
-(* CORE_GENERATION_INFO = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=36,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_A\
+(* X_CORE_INFO = "axi_dwidth_converter_v2_1_37_top,Vivado 2025.2" *)
+(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{}" *)
+(* CORE_GENERATION_INFO = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=37,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_A\
 SYNC=0,C_MAX_SPLIT_BEATS=16,C_PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module microblaze_microblaze_0_axi_periph_imp_auto_us_0 (
@@ -285,7 +285,7 @@ input wire m_axi_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI RREADY" *)
 output wire m_axi_rready;
 
-  axi_dwidth_converter_v2_1_36_top #(
+  axi_dwidth_converter_v2_1_37_top #(
     .C_FAMILY("artix7"),
     .C_AXI_PROTOCOL(0),
     .C_S_AXI_ID_WIDTH(1),

@@ -1,9 +1,9 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Fri Aug  1 10:44:37 2025
--- Host        : TPC-0073 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Sun Nov 23 14:16:17 2025
+-- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_axi_iic_1_0 -prefix
 --               microblaze_axi_iic_1_0_ microblaze_axi_iic_0_0_sim_netlist.vhdl
 -- Design      : microblaze_axi_iic_0_0
@@ -6879,7 +6879,7 @@ entity microblaze_axi_iic_1_0_xpm_cdc_single is
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of microblaze_axi_iic_1_0_xpm_cdc_single : entity is "TRUE";
   attribute keep_hierarchy : string;
-  attribute keep_hierarchy of microblaze_axi_iic_1_0_xpm_cdc_single : entity is "true";
+  attribute keep_hierarchy of microblaze_axi_iic_1_0_xpm_cdc_single : entity is "soft";
   attribute xpm_cdc : string;
   attribute xpm_cdc of microblaze_axi_iic_1_0_xpm_cdc_single : entity is "SINGLE";
 end microblaze_axi_iic_1_0_xpm_cdc_single;
@@ -6944,7 +6944,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \microblaze_axi_iic_1_0_xpm_cdc_single__2\ is
+entity \microblaze_axi_iic_1_0_xpm_cdc_single__1\ is
   port (
     src_clk : in STD_LOGIC;
     src_in : in STD_LOGIC;
@@ -6952,26 +6952,26 @@ entity \microblaze_axi_iic_1_0_xpm_cdc_single__2\ is
     dest_out : out STD_LOGIC
   );
   attribute DEST_SYNC_FF : integer;
-  attribute DEST_SYNC_FF of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is 4;
+  attribute DEST_SYNC_FF of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is 4;
   attribute INIT_SYNC_FF : integer;
-  attribute INIT_SYNC_FF of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is 0;
+  attribute INIT_SYNC_FF of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is 0;
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is "xpm_cdc_single";
+  attribute ORIG_REF_NAME of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is "xpm_cdc_single";
   attribute SIM_ASSERT_CHK : integer;
-  attribute SIM_ASSERT_CHK of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is 0;
+  attribute SIM_ASSERT_CHK of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is 0;
   attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is 0;
+  attribute SRC_INPUT_REG of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is 0;
   attribute VERSION : integer;
-  attribute VERSION of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is 0;
+  attribute VERSION of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is 0;
   attribute XPM_MODULE : string;
-  attribute XPM_MODULE of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is "TRUE";
+  attribute XPM_MODULE of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is "TRUE";
   attribute keep_hierarchy : string;
-  attribute keep_hierarchy of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is "true";
+  attribute keep_hierarchy of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is "soft";
   attribute xpm_cdc : string;
-  attribute xpm_cdc of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ : entity is "SINGLE";
-end \microblaze_axi_iic_1_0_xpm_cdc_single__2\;
+  attribute xpm_cdc of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ : entity is "SINGLE";
+end \microblaze_axi_iic_1_0_xpm_cdc_single__1\;
 
-architecture STRUCTURE of \microblaze_axi_iic_1_0_xpm_cdc_single__2\ is
+architecture STRUCTURE of \microblaze_axi_iic_1_0_xpm_cdc_single__1\ is
   signal syncstages_ff : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of syncstages_ff : signal is "true";
@@ -7033,15 +7033,91 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_axi_iic_1_0_debounce is
   port (
+    dest_out : out STD_LOGIC;
+    \syncstages_ff_reg[3]\ : out STD_LOGIC;
+    scl_rising_edge0 : out STD_LOGIC;
+    D : out STD_LOGIC_VECTOR ( 0 to 0 );
+    scl_i : in STD_LOGIC;
+    s_axi_aclk : in STD_LOGIC;
+    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
+    scl_rin_d1 : in STD_LOGIC;
+    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+end microblaze_axi_iic_1_0_debounce;
+
+architecture STRUCTURE of microblaze_axi_iic_1_0_debounce is
+  signal \^dest_out\ : STD_LOGIC;
+  attribute DEST_SYNC_FF : integer;
+  attribute DEST_SYNC_FF of INPUT_DOUBLE_REGS : label is 4;
+  attribute INIT_SYNC_FF : integer;
+  attribute INIT_SYNC_FF of INPUT_DOUBLE_REGS : label is 0;
+  attribute SIM_ASSERT_CHK : integer;
+  attribute SIM_ASSERT_CHK of INPUT_DOUBLE_REGS : label is 0;
+  attribute SRC_INPUT_REG : integer;
+  attribute SRC_INPUT_REG of INPUT_DOUBLE_REGS : label is 0;
+  attribute VERSION : integer;
+  attribute VERSION of INPUT_DOUBLE_REGS : label is 0;
+  attribute XPM_CDC : string;
+  attribute XPM_CDC of INPUT_DOUBLE_REGS : label is "SINGLE";
+  attribute XPM_MODULE : string;
+  attribute XPM_MODULE of INPUT_DOUBLE_REGS : label is "TRUE";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \q_int[0]_i_5__0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of scl_rising_edge_i_1 : label is "soft_lutpair2";
+begin
+  dest_out <= \^dest_out\;
+\FSM_onehot_scl_state[7]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \^dest_out\,
+      I1 => Q(0),
+      O => D(0)
+    );
+INPUT_DOUBLE_REGS: entity work.\microblaze_axi_iic_1_0_xpm_cdc_single__1\
+     port map (
+      dest_clk => s_axi_aclk,
+      dest_out => \^dest_out\,
+      src_clk => '0',
+      src_in => scl_i
+    );
+\q_int[0]_i_5__0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \^dest_out\,
+      I1 => CO(0),
+      O => \syncstages_ff_reg[3]\
+    );
+scl_rising_edge_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => \^dest_out\,
+      I1 => scl_rin_d1,
+      O => scl_rising_edge0
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity microblaze_axi_iic_1_0_debounce_3 is
+  port (
     Sda_clean : out STD_LOGIC;
     \syncstages_ff_reg[3]\ : out STD_LOGIC;
     sda_i : in STD_LOGIC;
     s_axi_aclk : in STD_LOGIC;
     sda_rin_d1 : in STD_LOGIC
   );
-end microblaze_axi_iic_1_0_debounce;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_axi_iic_1_0_debounce_3 : entity is "debounce";
+end microblaze_axi_iic_1_0_debounce_3;
 
-architecture STRUCTURE of microblaze_axi_iic_1_0_debounce is
+architecture STRUCTURE of microblaze_axi_iic_1_0_debounce_3 is
   signal \^sda_clean\ : STD_LOGIC;
   attribute DEST_SYNC_FF : integer;
   attribute DEST_SYNC_FF of INPUT_DOUBLE_REGS : label is 4;
@@ -7074,82 +7150,6 @@ detect_stop_i_3: unisim.vcomponents.LUT2
       I0 => \^sda_clean\,
       I1 => sda_rin_d1,
       O => \syncstages_ff_reg[3]\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity \microblaze_axi_iic_1_0_debounce__xdcDup__1\ is
-  port (
-    dest_out : out STD_LOGIC;
-    \syncstages_ff_reg[3]\ : out STD_LOGIC;
-    scl_rising_edge0 : out STD_LOGIC;
-    D : out STD_LOGIC_VECTOR ( 0 to 0 );
-    scl_i : in STD_LOGIC;
-    s_axi_aclk : in STD_LOGIC;
-    CO : in STD_LOGIC_VECTOR ( 0 to 0 );
-    scl_rin_d1 : in STD_LOGIC;
-    Q : in STD_LOGIC_VECTOR ( 0 to 0 )
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \microblaze_axi_iic_1_0_debounce__xdcDup__1\ : entity is "debounce";
-end \microblaze_axi_iic_1_0_debounce__xdcDup__1\;
-
-architecture STRUCTURE of \microblaze_axi_iic_1_0_debounce__xdcDup__1\ is
-  signal \^dest_out\ : STD_LOGIC;
-  attribute DEST_SYNC_FF : integer;
-  attribute DEST_SYNC_FF of INPUT_DOUBLE_REGS : label is 4;
-  attribute INIT_SYNC_FF : integer;
-  attribute INIT_SYNC_FF of INPUT_DOUBLE_REGS : label is 0;
-  attribute SIM_ASSERT_CHK : integer;
-  attribute SIM_ASSERT_CHK of INPUT_DOUBLE_REGS : label is 0;
-  attribute SRC_INPUT_REG : integer;
-  attribute SRC_INPUT_REG of INPUT_DOUBLE_REGS : label is 0;
-  attribute VERSION : integer;
-  attribute VERSION of INPUT_DOUBLE_REGS : label is 0;
-  attribute XPM_CDC : string;
-  attribute XPM_CDC of INPUT_DOUBLE_REGS : label is "SINGLE";
-  attribute XPM_MODULE : string;
-  attribute XPM_MODULE of INPUT_DOUBLE_REGS : label is "TRUE";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \q_int[0]_i_5__0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of scl_rising_edge_i_1 : label is "soft_lutpair2";
-begin
-  dest_out <= \^dest_out\;
-\FSM_onehot_scl_state[7]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \^dest_out\,
-      I1 => Q(0),
-      O => D(0)
-    );
-INPUT_DOUBLE_REGS: entity work.\microblaze_axi_iic_1_0_xpm_cdc_single__2\
-     port map (
-      dest_clk => s_axi_aclk,
-      dest_out => \^dest_out\,
-      src_clk => '0',
-      src_in => scl_i
-    );
-\q_int[0]_i_5__0\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => \^dest_out\,
-      I1 => CO(0),
-      O => \syncstages_ff_reg[3]\
-    );
-scl_rising_edge_i_1: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \^dest_out\,
-      I1 => scl_rin_d1,
-      O => scl_rising_edge0
     );
 end STRUCTURE;
 library IEEE;
@@ -9384,7 +9384,7 @@ architecture STRUCTURE of microblaze_axi_iic_1_0_slave_attachment is
   signal plusOp : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal rst : STD_LOGIC;
   signal \^s_axi_bresp\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal s_axi_bresp_i : STD_LOGIC;
+  signal s_axi_bresp_i : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \s_axi_bresp_i[1]_i_1_n_0\ : STD_LOGIC;
   signal s_axi_bvalid_i_i_1_n_0 : STD_LOGIC;
   signal \^s_axi_bvalid_i_reg_0\ : STD_LOGIC;
@@ -9424,7 +9424,7 @@ architecture STRUCTURE of microblaze_axi_iic_1_0_slave_attachment is
   signal \s_axi_rdata_i_reg[1]_i_4_n_0\ : STD_LOGIC;
   signal \s_axi_rdata_i_reg[2]_i_4_n_0\ : STD_LOGIC;
   signal \s_axi_rdata_i_reg[3]_i_4_n_0\ : STD_LOGIC;
-  signal s_axi_rresp_i : STD_LOGIC;
+  signal s_axi_rresp_i : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s_axi_rvalid_i_i_1_n_0 : STD_LOGIC;
   signal \^s_axi_rvalid_i_reg_0\ : STD_LOGIC;
   signal s_axi_wdata_0_sn_1 : STD_LOGIC;
@@ -9486,7 +9486,7 @@ begin
       I0 => \FSM_onehot_state_reg_n_0_[0]\,
       I1 => s_axi_arvalid,
       I2 => \^is_read_reg_0\,
-      I3 => s_axi_rresp_i,
+      I3 => s_axi_rresp_i(0),
       O => \FSM_onehot_state[1]_i_1_n_0\
     );
 \FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
@@ -9499,7 +9499,7 @@ begin
       I2 => s_axi_wvalid,
       I3 => s_axi_awvalid,
       I4 => \^is_write_reg_0\,
-      I5 => s_axi_bresp_i,
+      I5 => s_axi_bresp_i(0),
       O => \FSM_onehot_state[2]_i_1_n_0\
     );
 \FSM_onehot_state[3]_i_1\: unisim.vcomponents.LUT6
@@ -9508,8 +9508,8 @@ begin
     )
         port map (
       I0 => \^is_write_reg_0\,
-      I1 => s_axi_bresp_i,
-      I2 => s_axi_rresp_i,
+      I1 => s_axi_bresp_i(0),
+      I2 => s_axi_rresp_i(0),
       I3 => \^is_read_reg_0\,
       I4 => \FSM_onehot_state_reg_n_0_[3]\,
       I5 => \FSM_onehot_state[3]_i_2_n_0\,
@@ -9545,7 +9545,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => \FSM_onehot_state[1]_i_1_n_0\,
-      Q => s_axi_rresp_i,
+      Q => s_axi_rresp_i(0),
       R => rst
     );
 \FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
@@ -9556,7 +9556,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => \FSM_onehot_state[2]_i_1_n_0\,
-      Q => s_axi_bresp_i,
+      Q => s_axi_bresp_i(0),
       R => rst
     );
 \FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
@@ -9999,7 +9999,7 @@ rst_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => AXI_IP2Bus_Error,
-      I1 => s_axi_bresp_i,
+      I1 => s_axi_bresp_i(0),
       I2 => \^s_axi_bresp\(0),
       O => \s_axi_bresp_i[1]_i_1_n_0\
     );
@@ -10455,7 +10455,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(31),
       Q => s_axi_rdata(0),
       R => rst
@@ -10466,7 +10466,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(30),
       Q => s_axi_rdata(1),
       R => rst
@@ -10484,7 +10484,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(29),
       Q => s_axi_rdata(2),
       R => rst
@@ -10502,7 +10502,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => Intr2Bus_DBus(0),
       Q => s_axi_rdata(9),
       R => rst
@@ -10513,7 +10513,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(28),
       Q => s_axi_rdata(3),
       R => rst
@@ -10531,7 +10531,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(27),
       Q => s_axi_rdata(4),
       R => rst
@@ -10542,7 +10542,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(26),
       Q => s_axi_rdata(5),
       R => rst
@@ -10553,7 +10553,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(25),
       Q => s_axi_rdata(6),
       R => rst
@@ -10564,7 +10564,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Data(24),
       Q => s_axi_rdata(7),
       R => rst
@@ -10575,7 +10575,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => IIC2Bus_Data(23),
       Q => s_axi_rdata(8),
       R => rst
@@ -10586,7 +10586,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       C => s_axi_aclk,
-      CE => s_axi_rresp_i,
+      CE => s_axi_rresp_i(0),
       D => AXI_IP2Bus_Error,
       Q => s_axi_rresp(0),
       R => rst
@@ -10882,7 +10882,7 @@ end microblaze_axi_iic_1_0_filter;
 
 architecture STRUCTURE of microblaze_axi_iic_1_0_filter is
 begin
-SCL_DEBOUNCE: entity work.\microblaze_axi_iic_1_0_debounce__xdcDup__1\
+SCL_DEBOUNCE: entity work.microblaze_axi_iic_1_0_debounce
      port map (
       CO(0) => CO(0),
       D(0) => D(0),
@@ -10894,7 +10894,7 @@ SCL_DEBOUNCE: entity work.\microblaze_axi_iic_1_0_debounce__xdcDup__1\
       scl_rising_edge0 => scl_rising_edge0,
       \syncstages_ff_reg[3]\ => \syncstages_ff_reg[3]_0\
     );
-SDA_DEBOUNCE: entity work.microblaze_axi_iic_1_0_debounce
+SDA_DEBOUNCE: entity work.microblaze_axi_iic_1_0_debounce_3
      port map (
       Sda_clean => Sda_clean,
       s_axi_aclk => s_axi_aclk,
@@ -12071,7 +12071,7 @@ entity microblaze_axi_iic_1_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_axi_iic_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of microblaze_axi_iic_1_0 : entity is "axi_iic,Vivado 2025.1";
+  attribute x_core_info of microblaze_axi_iic_1_0 : entity is "axi_iic,Vivado 2025.2";
 end microblaze_axi_iic_1_0;
 
 architecture STRUCTURE of microblaze_axi_iic_1_0 is
@@ -12148,7 +12148,7 @@ architecture STRUCTURE of microblaze_axi_iic_1_0 is
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
   attribute x_interface_mode of s_axi_awaddr : signal is "slave S_AXI";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

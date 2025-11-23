@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sat Aug  9 12:03:29 2025
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Sun Nov 23 14:16:20 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_microblaze_0_axi_periph_imp_auto_us_0 -prefix
 --               microblaze_microblaze_0_axi_periph_imp_auto_us_0_ microblaze_microblaze_0_axi_periph_imp_auto_us_0_stub.vhdl
@@ -90,9 +90,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0 is
   );
 
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{}";
+  attribute CHECK_LICENSE_TYPE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{}";
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=36,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_BEATS=16,C_PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}";
+  attribute CORE_GENERATION_INFO of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_dwidth_converter,x_ipVersion=2.1,x_ipCoreRevision=37,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_AXI_PROTOCOL=0,C_S_AXI_ID_WIDTH=1,C_SUPPORTS_ID=0,C_AXI_ADDR_WIDTH=32,C_S_AXI_DATA_WIDTH=32,C_M_AXI_DATA_WIDTH=64,C_AXI_SUPPORTS_WRITE=1,C_AXI_SUPPORTS_READ=1,C_FIFO_MODE=0,C_S_AXI_ACLK_RATIO=1,C_M_AXI_ACLK_RATIO=2,C_AXI_IS_ACLK_ASYNC=0,C_MAX_SPLIT_BEATS=16,C_PACKING_LEVEL=1,C_SYNCHRONIZER_STAGE=3}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "yes";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0;
@@ -186,6 +186,6 @@ architecture stub of microblaze_microblaze_0_axi_periph_imp_auto_us_0 is
   attribute X_INTERFACE_INFO of m_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 M_AXI RVALID";
   attribute X_INTERFACE_INFO of m_axi_rready : signal is "xilinx.com:interface:aximm:1.0 M_AXI RREADY";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of stub : architecture is "axi_dwidth_converter_v2_1_36_top,Vivado 2025.1";
+  attribute X_CORE_INFO of stub : architecture is "axi_dwidth_converter_v2_1_37_top,Vivado 2025.2";
 begin
 end;

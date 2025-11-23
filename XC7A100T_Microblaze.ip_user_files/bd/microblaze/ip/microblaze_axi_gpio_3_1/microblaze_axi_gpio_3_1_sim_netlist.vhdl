@@ -1,12 +1,12 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Aug  7 10:34:57 2025
--- Host        : TPC-0073 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Sun Nov 23 14:16:15 2025
+-- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_axi_gpio_3_1 -prefix
---               microblaze_axi_gpio_3_1_ microblaze_axi_gpio_3_0_sim_netlist.vhdl
--- Design      : microblaze_axi_gpio_3_0
+--               microblaze_axi_gpio_3_1_ microblaze_axi_gpio_3_1_sim_netlist.vhdl
+-- Design      : microblaze_axi_gpio_3_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tcsg324-1
@@ -258,28 +258,28 @@ entity microblaze_axi_gpio_3_1_xpm_cdc_array_single is
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of microblaze_axi_gpio_3_1_xpm_cdc_array_single : entity is "TRUE";
   attribute keep_hierarchy : string;
-  attribute keep_hierarchy of microblaze_axi_gpio_3_1_xpm_cdc_array_single : entity is "true";
+  attribute keep_hierarchy of microblaze_axi_gpio_3_1_xpm_cdc_array_single : entity is "soft";
   attribute xpm_cdc : string;
   attribute xpm_cdc of microblaze_axi_gpio_3_1_xpm_cdc_array_single : entity is "ARRAY_SINGLE";
 end microblaze_axi_gpio_3_1_xpm_cdc_array_single;
 
 architecture STRUCTURE of microblaze_axi_gpio_3_1_xpm_cdc_array_single is
-  signal async_path_bit : STD_LOGIC;
-  signal \syncstages_ff[0]\ : STD_LOGIC;
+  signal async_path_bit : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \syncstages_ff[0]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of \syncstages_ff[0]\ : signal is "true";
   attribute async_reg : string;
   attribute async_reg of \syncstages_ff[0]\ : signal is "true";
   attribute xpm_cdc of \syncstages_ff[0]\ : signal is "ARRAY_SINGLE";
-  signal \syncstages_ff[1]\ : STD_LOGIC;
+  signal \syncstages_ff[1]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute RTL_KEEP of \syncstages_ff[1]\ : signal is "true";
   attribute async_reg of \syncstages_ff[1]\ : signal is "true";
   attribute xpm_cdc of \syncstages_ff[1]\ : signal is "ARRAY_SINGLE";
-  signal \syncstages_ff[2]\ : STD_LOGIC;
+  signal \syncstages_ff[2]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute RTL_KEEP of \syncstages_ff[2]\ : signal is "true";
   attribute async_reg of \syncstages_ff[2]\ : signal is "true";
   attribute xpm_cdc of \syncstages_ff[2]\ : signal is "ARRAY_SINGLE";
-  signal \syncstages_ff[3]\ : STD_LOGIC;
+  signal \syncstages_ff[3]\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute RTL_KEEP of \syncstages_ff[3]\ : signal is "true";
   attribute async_reg of \syncstages_ff[3]\ : signal is "true";
   attribute xpm_cdc of \syncstages_ff[3]\ : signal is "ARRAY_SINGLE";
@@ -298,38 +298,38 @@ architecture STRUCTURE of microblaze_axi_gpio_3_1_xpm_cdc_array_single is
   attribute KEEP of \syncstages_ff_reg[3][0]\ : label is "true";
   attribute XPM_CDC of \syncstages_ff_reg[3][0]\ : label is "ARRAY_SINGLE";
 begin
-  async_path_bit <= src_in(0);
-  dest_out(0) <= \syncstages_ff[3]\;
+  async_path_bit(0) <= src_in(0);
+  dest_out(0) <= \syncstages_ff[3]\(0);
 \syncstages_ff_reg[0][0]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => '1',
-      D => async_path_bit,
-      Q => \syncstages_ff[0]\,
+      D => async_path_bit(0),
+      Q => \syncstages_ff[0]\(0),
       R => '0'
     );
 \syncstages_ff_reg[1][0]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => '1',
-      D => \syncstages_ff[0]\,
-      Q => \syncstages_ff[1]\,
+      D => \syncstages_ff[0]\(0),
+      Q => \syncstages_ff[1]\(0),
       R => '0'
     );
 \syncstages_ff_reg[2][0]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => '1',
-      D => \syncstages_ff[1]\,
-      Q => \syncstages_ff[2]\,
+      D => \syncstages_ff[1]\(0),
+      Q => \syncstages_ff[2]\(0),
       R => '0'
     );
 \syncstages_ff_reg[3][0]\: unisim.vcomponents.FDRE
      port map (
       C => dest_clk,
       CE => '1',
-      D => \syncstages_ff[2]\,
-      Q => \syncstages_ff[3]\,
+      D => \syncstages_ff[2]\(0),
+      Q => \syncstages_ff[3]\(0),
       R => '0'
     );
 end STRUCTURE;
@@ -349,7 +349,7 @@ entity microblaze_axi_gpio_3_1_GPIO_Core is
     \Not_Dual.gpio_OE_reg[0]_1\ : in STD_LOGIC;
     bus2ip_rnw : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    bus2ip_cs : in STD_LOGIC;
+    bus2ip_cs : in STD_LOGIC_VECTOR ( 0 to 0 );
     \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg\ : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\ : in STD_LOGIC;
@@ -364,8 +364,8 @@ architecture STRUCTURE of microblaze_axi_gpio_3_1_GPIO_Core is
   signal \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1[31]_i_2_n_0\ : STD_LOGIC;
   signal \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1_reg\ : STD_LOGIC;
   signal \^not_dual.gpio_oe_reg[0]_0\ : STD_LOGIC;
-  signal gpio_Data_In : STD_LOGIC;
-  signal gpio_io_i_d2 : STD_LOGIC;
+  signal gpio_Data_In : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal gpio_io_i_d2 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal gpio_xferAck_Reg : STD_LOGIC;
   signal iGPIO_xferAck : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
@@ -400,7 +400,7 @@ begin
       I1 => Q(0),
       I2 => Q(2),
       I3 => \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1[31]_i_2_n_0\,
-      I4 => gpio_Data_In,
+      I4 => gpio_Data_In(0),
       I5 => Q(1),
       O => \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1[31]_i_1_n_0\
     );
@@ -410,7 +410,7 @@ begin
     )
         port map (
       I0 => GPIO_xferAck_i,
-      I1 => bus2ip_cs,
+      I1 => bus2ip_cs(0),
       I2 => gpio_xferAck_Reg,
       I3 => bus2ip_rnw,
       O => \Not_Dual.ALLIN1_ND.READ_REG_GEN[0].reg1[31]_i_2_n_0\
@@ -426,7 +426,7 @@ begin
 \Not_Dual.INPUT_DOUBLE_REGS3\: entity work.microblaze_axi_gpio_3_1_xpm_cdc_array_single
      port map (
       dest_clk => s_axi_aclk,
-      dest_out(0) => gpio_io_i_d2,
+      dest_out(0) => gpio_io_i_d2(0),
       src_clk => '0',
       src_in(0) => gpio_io_i(0)
     );
@@ -434,8 +434,8 @@ begin
      port map (
       C => s_axi_aclk,
       CE => '1',
-      D => gpio_io_i_d2,
-      Q => gpio_Data_In,
+      D => gpio_io_i_d2(0),
+      Q => gpio_Data_In(0),
       R => '0'
     );
 \Not_Dual.gpio_OE_reg[0]\: unisim.vcomponents.FDSE
@@ -463,7 +463,7 @@ iGPIO_xferAck_i_1: unisim.vcomponents.LUT3
     )
         port map (
       I0 => gpio_xferAck_Reg,
-      I1 => bus2ip_cs,
+      I1 => bus2ip_cs(0),
       I2 => GPIO_xferAck_i,
       O => iGPIO_xferAck
     );
@@ -581,13 +581,13 @@ architecture STRUCTURE of microblaze_axi_gpio_3_1_slave_attachment is
   signal p_1_in : STD_LOGIC_VECTOR ( 8 downto 2 );
   signal p_5_in : STD_LOGIC;
   signal plusOp : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal s_axi_bresp_i : STD_LOGIC;
+  signal s_axi_bresp_i : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s_axi_bvalid_i_i_1_n_0 : STD_LOGIC;
   signal \^s_axi_bvalid_i_reg_0\ : STD_LOGIC;
   signal \^s_axi_rdata\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \s_axi_rdata_i[0]_i_1_n_0\ : STD_LOGIC;
   signal \s_axi_rdata_i[31]_i_1_n_0\ : STD_LOGIC;
-  signal s_axi_rresp_i : STD_LOGIC;
+  signal s_axi_rresp_i : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s_axi_rvalid_i_i_1_n_0 : STD_LOGIC;
   signal \^s_axi_rvalid_i_reg_0\ : STD_LOGIC;
   signal start2 : STD_LOGIC;
@@ -643,7 +643,7 @@ begin
       I0 => s_axi_arvalid,
       I1 => \FSM_onehot_state_reg_n_0_[0]\,
       I2 => \^ip2bus_rdack_i_d1_reg\,
-      I3 => s_axi_rresp_i,
+      I3 => s_axi_rresp_i(0),
       O => \FSM_onehot_state[1]_i_1_n_0\
     );
 \FSM_onehot_state[2]_i_1\: unisim.vcomponents.LUT6
@@ -656,7 +656,7 @@ begin
       I2 => s_axi_arvalid,
       I3 => \FSM_onehot_state_reg_n_0_[0]\,
       I4 => \^ip2bus_wrack_i_d1_reg\,
-      I5 => s_axi_bresp_i,
+      I5 => s_axi_bresp_i(0),
       O => \FSM_onehot_state[2]_i_1_n_0\
     );
 \FSM_onehot_state[3]_i_1\: unisim.vcomponents.LUT6
@@ -665,8 +665,8 @@ begin
     )
         port map (
       I0 => \^ip2bus_wrack_i_d1_reg\,
-      I1 => s_axi_bresp_i,
-      I2 => s_axi_rresp_i,
+      I1 => s_axi_bresp_i(0),
+      I2 => s_axi_rresp_i(0),
       I3 => \^ip2bus_rdack_i_d1_reg\,
       I4 => \FSM_onehot_state_reg_n_0_[3]\,
       I5 => \state1__2\,
@@ -702,7 +702,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => \FSM_onehot_state[1]_i_1_n_0\,
-      Q => s_axi_rresp_i,
+      Q => s_axi_rresp_i(0),
       R => \^ss\(0)
     );
 \FSM_onehot_state_reg[2]\: unisim.vcomponents.FDRE
@@ -713,7 +713,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => \FSM_onehot_state[2]_i_1_n_0\,
-      Q => s_axi_bresp_i,
+      Q => s_axi_bresp_i(0),
       R => \^ss\(0)
     );
 \FSM_onehot_state_reg[3]\: unisim.vcomponents.FDRE
@@ -1003,7 +1003,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \s_axi_rdata_i_reg[31]_0\(0),
-      I1 => s_axi_rresp_i,
+      I1 => s_axi_rresp_i(0),
       I2 => \^s_axi_rdata\(0),
       O => \s_axi_rdata_i[0]_i_1_n_0\
     );
@@ -1013,7 +1013,7 @@ s_axi_bvalid_i_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \s_axi_rdata_i_reg[31]_0\(1),
-      I1 => s_axi_rresp_i,
+      I1 => s_axi_rresp_i(0),
       I2 => \^s_axi_rdata\(1),
       O => \s_axi_rdata_i[31]_i_1_n_0\
     );
@@ -1154,7 +1154,7 @@ entity microblaze_axi_gpio_3_1_axi_lite_ipif is
     Bus_RNW_reg : out STD_LOGIC;
     s_axi_rvalid_i_reg : out STD_LOGIC;
     s_axi_bvalid_i_reg : out STD_LOGIC;
-    bus2ip_cs : out STD_LOGIC;
+    bus2ip_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : out STD_LOGIC_VECTOR ( 2 downto 0 );
     ip2bus_rdack_i_D1_reg : out STD_LOGIC;
     ip2bus_wrack_i_D1_reg : out STD_LOGIC;
@@ -1186,7 +1186,7 @@ I_SLAVE_ATTACHMENT: entity work.microblaze_axi_gpio_3_1_slave_attachment
       \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\ => \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg\,
       \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\ => \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg\,
       \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ => \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\,
-      \MEM_DECODE_GEN[0].cs_out_i_reg[0]\ => bus2ip_cs,
+      \MEM_DECODE_GEN[0].cs_out_i_reg[0]\ => bus2ip_cs(0),
       \Not_Dual.gpio_OE_reg[0]\ => \Not_Dual.gpio_OE_reg[0]\,
       Q(2 downto 0) => Q(2 downto 0),
       SS(0) => rst,
@@ -1291,7 +1291,7 @@ architecture STRUCTURE of microblaze_axi_gpio_3_1_axi_gpio is
   signal \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : STD_LOGIC;
   signal \I_SLAVE_ATTACHMENT/rst\ : STD_LOGIC;
   signal bus2ip_addr : STD_LOGIC_VECTOR ( 0 to 6 );
-  signal bus2ip_cs : STD_LOGIC;
+  signal bus2ip_cs : STD_LOGIC_VECTOR ( 0 to 0 );
   signal bus2ip_rnw : STD_LOGIC;
   signal gpio_core_1_n_0 : STD_LOGIC;
   signal ip2bus_data : STD_LOGIC_VECTOR ( 0 to 31 );
@@ -1424,7 +1424,7 @@ AXI_LITE_IPIF_I: entity work.microblaze_axi_gpio_3_1_axi_lite_ipif
       Q(1) => bus2ip_addr(5),
       Q(0) => bus2ip_addr(6),
       \bus2ip_addr_i_reg[3]\ => AXI_LITE_IPIF_I_n_15,
-      bus2ip_cs => bus2ip_cs,
+      bus2ip_cs(0) => bus2ip_cs(0),
       bus2ip_rnw => bus2ip_rnw,
       ip2bus_rdack_i_D1 => ip2bus_rdack_i_D1,
       ip2bus_rdack_i_D1_reg => s_axi_arready,
@@ -1469,7 +1469,7 @@ gpio_core_1: entity work.microblaze_axi_gpio_3_1_GPIO_Core
       Q(2) => bus2ip_addr(0),
       Q(1) => bus2ip_addr(5),
       Q(0) => bus2ip_addr(6),
-      bus2ip_cs => bus2ip_cs,
+      bus2ip_cs(0) => bus2ip_cs(0),
       bus2ip_rnw => bus2ip_rnw,
       gpio_io_i(0) => gpio_io_i(0),
       ip2bus_rdack_i => ip2bus_rdack_i,
@@ -1540,11 +1540,11 @@ entity microblaze_axi_gpio_3_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of microblaze_axi_gpio_3_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of microblaze_axi_gpio_3_1 : entity is "microblaze_axi_gpio_3_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of microblaze_axi_gpio_3_1 : entity is "microblaze_axi_gpio_3_1,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_axi_gpio_3_1 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of microblaze_axi_gpio_3_1 : entity is "axi_gpio,Vivado 2025.1";
+  attribute x_core_info of microblaze_axi_gpio_3_1 : entity is "axi_gpio,Vivado 2025.2";
 end microblaze_axi_gpio_3_1;
 
 architecture STRUCTURE of microblaze_axi_gpio_3_1 is
@@ -1614,7 +1614,7 @@ architecture STRUCTURE of microblaze_axi_gpio_3_1 is
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
   attribute x_interface_mode of s_axi_awaddr : signal is "slave S_AXI";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 S_AXI RRESP";

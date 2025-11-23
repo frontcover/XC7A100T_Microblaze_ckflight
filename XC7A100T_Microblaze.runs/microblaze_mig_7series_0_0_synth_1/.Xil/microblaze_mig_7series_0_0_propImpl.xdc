@@ -127,10 +127,6 @@ set_property src_info {type:XDC file:1 line:325 export:INPUT save:INPUT read:REA
 set_property LOC PLLE2_ADV_X1Y1 [get_cells -hier -filter {NAME =~ */u_ddr2_infrastructure/plle2_i}]
 set_property src_info {type:XDC file:1 line:326 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC MMCME2_ADV_X1Y1 [get_cells -hier -filter {NAME =~ */u_ddr2_infrastructure/gen_mmcm.mmcm_i}]
-set_property src_info {type:XDC file:1 line:334 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -from [get_cells -hier -filter {NAME =~ */mc0/mc_read_idle_r_reg}] -to   [get_cells -hier -filter {NAME =~ */input_[?].iserdes_dq_.iserdesdq}] -hold 5
-set_property src_info {type:XDC file:1 line:341 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -through [get_pins -filter {NAME =~ */OSERDESRST} -of [get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}]] -hold 1 -start
 set_property src_info {type:XDC file:1 line:345 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay -from [get_cells -hier *rstdiv0_sync_r1_reg*] -to [get_pins -filter {NAME =~ */RESET} -of [get_cells -hier -filter {REF_NAME == PHY_CONTROL}]] -datapath_only 5
 set_property src_info {type:XDC file:1 line:349 export:INPUT save:INPUT read:READ} [current_design]

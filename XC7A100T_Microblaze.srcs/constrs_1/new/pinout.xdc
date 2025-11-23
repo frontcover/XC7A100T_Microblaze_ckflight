@@ -55,6 +55,9 @@ set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[1]}];
 set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports {JD7_I2C_SCL}];
 set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports {JD8_I2C_SDA}];
 
+# Debug gpio to scope
+set_property -dict { PACKAGE_PIN C17    IOSTANDARD LVCMOS33 } [get_ports {JA1_SCOPE}];
+
 
 #USB UART
 set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_UART_TX }];

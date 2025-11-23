@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Thu Jul 31 21:13:22 2025
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:15:55 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_rst_clk_wiz_1_100M_0 -prefix
 //               microblaze_rst_clk_wiz_1_100M_0_ microblaze_rst_clk_wiz_1_100M_0_sim_netlist.v
@@ -200,7 +200,7 @@ module microblaze_rst_clk_wiz_1_100M_0_lpf
         .R(1'b0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_rst_clk_wiz_1_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_rst_clk_wiz_1_100M_0,proc_sys_reset,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "proc_sys_reset,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_rst_clk_wiz_1_100M_0
    (slowest_sync_clk,
@@ -739,7 +739,7 @@ endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
 (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) 
-(* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
+(* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module microblaze_rst_clk_wiz_1_100M_0_xpm_cdc_single
    (src_clk,
     src_in,
@@ -795,7 +795,7 @@ endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* ORIG_REF_NAME = "xpm_cdc_single" *) 
 (* SIM_ASSERT_CHK = "0" *) (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "SINGLE" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "SINGLE" *) 
 module microblaze_rst_clk_wiz_1_100M_0_xpm_cdc_single__1
    (src_clk,
     src_in,

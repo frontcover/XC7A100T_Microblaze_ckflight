@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Sat Aug  9 12:03:26 2025
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:15:56 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_microblaze_0_axi_intc_0 -prefix
 //               microblaze_microblaze_0_axi_intc_0_ microblaze_microblaze_0_axi_intc_0_sim_netlist.v
@@ -1868,6 +1868,7 @@ module microblaze_microblaze_0_axi_intc_0_intc_core
   wire \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[0]_i_1_n_0 ;
   wire \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[1]_i_1_n_0 ;
   wire \IVAR_INDEX_SYNC_ON_AXI_CLK_GEN.ivar_index_axi_clk[2]_i_1_n_0 ;
+  wire [2:2]\IVR_GEN.IVR_DATA_GEN_P.ivr_in ;
   wire \IVR_GEN.ivr[0]_i_1_n_0 ;
   wire \IVR_GEN.ivr[1]_i_1_n_0 ;
   wire \IVR_GEN.ivr_reg[0]_0 ;
@@ -1935,7 +1936,6 @@ module microblaze_microblaze_0_axi_intc_0_intc_core
   wire [2:0]ivar_index_axi_clk;
   wire ivar_index_sample_en;
   wire ivar_index_sample_en_i;
-  wire [2:2]ivr_in;
   wire \mer_int_reg[0]_0 ;
   wire \mer_int_reg[0]_1 ;
   wire \mer_int_reg[1]_0 ;
@@ -2367,7 +2367,7 @@ module microblaze_microblaze_0_axi_intc_0_intc_core
         .I2(p_0_in11_in),
         .I3(p_1_in),
         .I4(p_0_in10_in),
-        .O(ivr_in));
+        .O(\IVR_GEN.IVR_DATA_GEN_P.ivr_in ));
   FDRE \IVR_GEN.ivr_reg[0] 
        (.C(s_axi_aclk),
         .CE(1'b1),
@@ -2383,7 +2383,7 @@ module microblaze_microblaze_0_axi_intc_0_intc_core
   FDSE \IVR_GEN.ivr_reg[2] 
        (.C(s_axi_aclk),
         .CE(1'b1),
-        .D(ivr_in),
+        .D(\IVR_GEN.IVR_DATA_GEN_P.ivr_in ),
         .Q(\IVR_GEN.ivr_reg[2]_0 ),
         .S(SR));
   LUT6 #(
@@ -2784,7 +2784,7 @@ module microblaze_microblaze_0_axi_intc_0_intc_core
         .O(\REG_GEN[3].ier_reg[3]_0 ));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_intc_0,axi_intc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_intc,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_intc_0,axi_intc,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_intc,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_microblaze_0_axi_intc_0
    (s_axi_aclk,
@@ -2814,7 +2814,7 @@ module microblaze_microblaze_0_axi_intc_0
     interrupt_address);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 s_axi_aclk CLK" *) (* x_interface_mode = "slave s_axi_aclk" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 s_resetn RST" *) (* x_interface_mode = "slave s_resetn" *) (* x_interface_parameter = "XIL_INTERFACENAME s_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi AWADDR" *) (* x_interface_mode = "slave s_axi" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi AWADDR" *) (* x_interface_mode = "slave s_axi" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi WDATA" *) input [31:0]s_axi_wdata;
@@ -4489,7 +4489,7 @@ module microblaze_microblaze_0_axi_intc_0_slave_attachment
   wire s_axi_awvalid;
   wire s_axi_bready;
   wire [0:0]s_axi_bresp;
-  wire s_axi_bresp_i;
+  wire [0:0]s_axi_bresp_i;
   wire \s_axi_bresp_i[1]_i_1_n_0 ;
   wire s_axi_bvalid_i_i_1_n_0;
   wire s_axi_bvalid_i_reg_0;
@@ -4514,7 +4514,7 @@ module microblaze_microblaze_0_axi_intc_0_slave_attachment
   wire \s_axi_rdata_i_reg[3]_0 ;
   wire s_axi_rready;
   wire [0:0]s_axi_rresp;
-  wire s_axi_rresp_i;
+  wire [0:0]s_axi_rresp_i;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_rvalid_i_reg_0;
   wire [3:0]s_axi_wdata;

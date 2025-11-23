@@ -31,6 +31,8 @@ entity top_module is
         JD7_I2C_SCL          : inout std_logic;
         JD8_I2C_SDA          : inout std_logic;
         
+        JA1_SCOPE            : out std_logic;
+        
             -- DDR2 interface pins (external FPGA pins)
         ddr2_dq       : inout std_logic_vector(15 downto 0);
         ddr2_dqs_p    : inout std_logic_vector(1 downto 0);
@@ -64,51 +66,51 @@ architecture Behavioral of top_module is
 
     component ila_0
     port (
-        clk    : in  std_logic;  
-        probe0 : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-        probe1 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-        probe2 : IN STD_LOGIC_VECTOR(66 DOWNTO 0);
-        probe3 : IN STD_LOGIC_VECTOR(11 DOWNTO 0)
+        clk : IN STD_LOGIC;
+        probe0 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+        probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+        probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0)
     );
     end component;
     
     component microblaze_wrapper
     port (
-        DDR2_0_addr             : out STD_LOGIC_VECTOR ( 12 downto 0 );
-        DDR2_0_ba               : out STD_LOGIC_VECTOR ( 2 downto 0 );
-        DDR2_0_cas_n            : out STD_LOGIC;
-        DDR2_0_ck_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ck_p             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cke              : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cs_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_dm               : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dq               : inout STD_LOGIC_VECTOR ( 15 downto 0 );
-        DDR2_0_dqs_n            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dqs_p            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_odt              : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ras_n            : out STD_LOGIC;
-        DDR2_0_we_n             : out STD_LOGIC;
-        S_AXIS_S2MM_0_tdata     : in STD_LOGIC_VECTOR ( 63 downto 0 );
-        S_AXIS_S2MM_0_tkeep     : in STD_LOGIC_VECTOR ( 7 downto 0 );
-        S_AXIS_S2MM_0_tlast     : in STD_LOGIC;
-        S_AXIS_S2MM_0_tready    : out STD_LOGIC;
-        S_AXIS_S2MM_0_tvalid    : in STD_LOGIC;
-        clk_100MHz              : in STD_LOGIC;
-        clk_out3_0              : out STD_LOGIC;
-        gpio_rtl_0_tri_o        : out STD_LOGIC_VECTOR ( 15 downto 0 );
-        gpio_rtl_1_tri_o        : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        gpio_rtl_2_tri_i        : in STD_LOGIC_VECTOR ( 1 downto 0 );
-        iic_rtl_0_scl_io        : inout STD_LOGIC;
-        iic_rtl_0_sda_io        : inout STD_LOGIC;
-        iic_rtl_1_scl_io        : inout STD_LOGIC;
-        iic_rtl_1_sda_io        : inout STD_LOGIC;
-        reset_rtl_0             : in STD_LOGIC;
-        spi0_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi0_miso               : in STD_LOGIC;
-        spi0_mosi               : out STD_LOGIC;
-        spi0_sck                : out STD_LOGIC;
-        uart_rtl_0_rxd          : in STD_LOGIC;
-        uart_rtl_0_txd          : out std_logic 
+        DDR2_0_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+        DDR2_0_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
+        DDR2_0_cas_n : out STD_LOGIC;
+        DDR2_0_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+        DDR2_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ras_n : out STD_LOGIC;
+        DDR2_0_we_n : out STD_LOGIC;
+        S_AXIS_S2MM_0_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+        S_AXIS_S2MM_0_tkeep : in STD_LOGIC_VECTOR ( 7 downto 0 );
+        S_AXIS_S2MM_0_tlast : in STD_LOGIC;
+        S_AXIS_S2MM_0_tready : out STD_LOGIC;
+        S_AXIS_S2MM_0_tvalid : in STD_LOGIC;
+        clk_100MHz : in STD_LOGIC;
+        clk_out3_0 : out STD_LOGIC;
+        gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+        gpio_rtl_1_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+        iic_rtl_0_scl_io : inout STD_LOGIC;
+        iic_rtl_0_sda_io : inout STD_LOGIC;
+        iic_rtl_1_scl_io : inout STD_LOGIC;
+        iic_rtl_1_sda_io : inout STD_LOGIC;
+        reset_rtl_0 : in STD_LOGIC;
+        spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_miso : in STD_LOGIC;
+        spi0_mosi : out STD_LOGIC;
+        spi0_sck : out STD_LOGIC;
+        uart_rtl_0_rxd : in STD_LOGIC;
+        uart_rtl_0_txd : out STD_LOGIC
     );
     end component;
     
@@ -190,11 +192,19 @@ architecture Behavioral of top_module is
 
     signal s_jd_gpio1_out : std_logic_vector(1 downto 0);
 
-    signal s_probe0 : std_logic_vector(4 downto 0);
-    signal s_probe1 : std_logic_vector(3 downto 0);
-    signal s_probe2 : std_logic_vector(66 downto 0);
-    signal s_probe3 : std_logic_vector(11 downto 0);
+    signal s_probe0 : std_logic_vector(63 downto 0);
+    signal s_probe1 : std_logic_vector(0 downto 0);
+    signal s_probe2 : std_logic_vector(0 downto 0);
+    signal s_probe3 : std_logic_vector(0 downto 0);
 
+    signal s_JA1_SCOPE : std_logic := '1';
+    
+    type s2mm_state_t is (IDLE, SEND, LAST, DONE);
+    signal s2mm_state : s2mm_state_t := IDLE;
+    
+    signal beat_cnt : integer := 0;
+    constant TOTAL_BEATS : integer := 1048576;
+    
     
 begin 
     
@@ -218,37 +228,17 @@ begin
     
     JD_GPIO1_OUT <= s_jd_gpio1_out;
   
+    JA1_SCOPE <= s_JA1_SCOPE;
     
-    -- UART
-    s_probe0(0) <= s_uart_tx;
-    s_probe0(1) <= s_uart_rx;
-    s_probe0(2) <= s_uart_start_tx;
-    s_probe0(3) <= s_uart_tx_active;
-    s_probe0(4) <= s_uart_tx_done;
-
-    -- SPI0 on board acc sensor ADXL362
-    s_probe1(0) <= s_spi0_mosi;
-    s_probe1(1) <= s_spi0_miso;
-    s_probe1(2) <= s_spi0_clk;
-    s_probe1(3) <= s_spi0_cs(0);
+    s_probe0 <= s_AXIS_S2MM_0_tdata;
+    s_probe1(0) <= s_AXIS_S2MM_0_tvalid;
+    s_probe2(0) <= s_AXIS_S2MM_0_tready;
+    s_probe3(0) <= s_AXIS_S2MM_0_tlast;
     
-  
-    -- AXIS
-    s_probe2(63 downto 0) <= s_AXIS_S2MM_0_tdata;
-    s_probe2(64)          <= s_AXIS_S2MM_0_tvalid;
-    s_probe2(65)          <= s_AXIS_S2MM_0_tready;
-    s_probe2(66)          <= s_AXIS_S2MM_0_tlast;
-    
-    -- FIFO + UART control
-    s_probe3(7 downto 0)   <= s_fifo_out;      -- received data
-    s_probe3(8)            <= s_fifo_read_en;
-    s_probe3(9)            <= s_uart_start_tx;
-    s_probe3(10)           <= s_uart_tx_active;
-    s_probe3(11)           <= s_uart_tx_done;
 
     ila_inst : ila_0
     port map (
-        clk    => SYSCLK,
+        clk    => s_clk_out3_0,
         probe0 => s_probe0,
         probe1 => s_probe1,
         probe2 => s_probe2,
@@ -368,59 +358,91 @@ begin
     
     end process;
     
-    -- Control dma to send data
-    process(s_clk_out3_0, reset_n)
-        variable data_counter : unsigned(63 downto 0) := (others => '0'); -- 256 max count
-        variable sending : boolean := false;
-        variable send_done : boolean := false;  -- NEW flag
-    begin
-        
-        if reset_n = '0' then
-            s_AXIS_S2MM_0_tvalid <= '0';
-            s_AXIS_S2MM_0_tdata <= (others => '0');
-            s_AXIS_S2MM_0_tkeep <= (others => '1');
-            s_AXIS_S2MM_0_tlast <= '0';
-            data_counter := (others => '0');
-            sending := false;
-            send_done := false;  -- reset done flag
-        
-        elsif rising_edge(s_clk_out3_0) then
-            
-            if not sending and not send_done then
-            
-                -- Start sending data only if not done yet
-                s_AXIS_S2MM_0_tvalid <= '1';
-                s_AXIS_S2MM_0_tdata <= std_logic_vector(data_counter);
-                s_AXIS_S2MM_0_tkeep <= (others => '1');
-                s_AXIS_S2MM_0_tlast <= '0';
-                sending := true;
-            
-            elsif sending then
-                
-                if s_AXIS_S2MM_0_tvalid = '1' and s_AXIS_S2MM_0_tready = '1' then
-                    s_AXIS_S2MM_0_tdata <= std_logic_vector(data_counter);
-                    
-                    if data_counter = 255 then
-                        s_AXIS_S2MM_0_tlast <= '1';
-                    else
-                        s_AXIS_S2MM_0_tlast <= '0';
-                    end if;
-                    --data_counter := data_counter + 1;
+    -- Control DMA to send data
+    process(s_clk_out3_0)
 
-                end if;
-                
-            end if;
+    begin
+        if rising_edge(s_clk_out3_0) then
+            if reset_n = '0' then
     
-            if s_AXIS_S2MM_0_tlast = '1' and s_AXIS_S2MM_0_tvalid = '1' and s_AXIS_S2MM_0_tready = '1' then
                 s_AXIS_S2MM_0_tvalid <= '0';
-                sending := false;
-                data_counter := (others => '0');
-                send_done := true;  -- mark burst done
+                s_AXIS_S2MM_0_tlast  <= '0';
+                s_AXIS_S2MM_0_tkeep  <= (others => '1');
+                s_AXIS_S2MM_0_tdata  <= (others => '0');
+    
+                s2mm_state           <= IDLE;
+                beat_cnt             <= 0;
+                s_JA1_SCOPE          <= '1';
+    
+            else
+    
+                case s2mm_state is
+    
+                    ----------------------------------------------------------------
+                    -- IDLE: bus is quiet
+                    ----------------------------------------------------------------
+                    when IDLE =>
+                        s_AXIS_S2MM_0_tvalid <= '0';
+                        s_AXIS_S2MM_0_tlast  <= '0';
+                        beat_cnt             <= 0;
+                        s_JA1_SCOPE          <= '1';
+    
+                        -- Start automatically (can replace with condition later)
+                        s2mm_state <= SEND;
+    
+                    ----------------------------------------------------------------
+                    -- SEND: stream normal beats until the second-last beat
+                    ----------------------------------------------------------------
+                    when SEND =>
+                        s_AXIS_S2MM_0_tlast <= '0';
+    
+                        if s_AXIS_S2MM_0_tready = '1' then
+                            s_AXIS_S2MM_0_tvalid <= '1';
+                            s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
+                            s_JA1_SCOPE          <= not s_JA1_SCOPE;
+    
+                            if beat_cnt = TOTAL_BEATS - 2 then
+                                beat_cnt   <= beat_cnt + 1;
+                                s2mm_state <= LAST;
+                            else
+                                beat_cnt <= beat_cnt + 1;
+                            end if;
+    
+                        else
+                            s_AXIS_S2MM_0_tvalid <= '0';
+                        end if;
+    
+                    ----------------------------------------------------------------
+                    -- LAST: send the final beat with TLAST=1
+                    ----------------------------------------------------------------
+                    when LAST =>
+                        s_AXIS_S2MM_0_tlast <= '1';
+    
+                        if s_AXIS_S2MM_0_tready = '1' then
+                            s_AXIS_S2MM_0_tvalid <= '1';
+                            s_AXIS_S2MM_0_tdata <= std_logic_vector(to_unsigned(beat_cnt, 64));
+                            s2mm_state           <= DONE;
+    
+                        else
+                            s_AXIS_S2MM_0_tvalid <= '0';
+                        end if;
+    
+                    ----------------------------------------------------------------
+                    -- DONE: end of burst
+                    ----------------------------------------------------------------
+                    when DONE =>
+                        s_AXIS_S2MM_0_tvalid <= '0';
+                        s_AXIS_S2MM_0_tlast  <= '0';
+                        s_JA1_SCOPE          <= '1';
+                        -- stay here until reset, or set <= IDLE for continuous bursts
+    
+                end case;
+    
             end if;
-            
         end if;
-        
     end process;
+
+
     
 
 

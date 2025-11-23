@@ -10,32 +10,42 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="1,025"></ZoomEndTime>
-      <Cursor1Time time="249"></Cursor1Time>
+      <ZoomEndTime time="18,391"></ZoomEndTime>
+      <Cursor1Time time="670"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="261"></NameColumnWidth>
-      <ValueColumnWidth column_width="282"></ValueColumnWidth>
+      <ValueColumnWidth column_width="266"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="2" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="array" fp_name="s_probe1">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">s_probe1[3:0]</obj_property>
-      <obj_property name="ObjectShortName">s_probe1[3:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="s_probe2">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">s_probe2[66:0]</obj_property>
-      <obj_property name="ObjectShortName">s_probe2[66:0]</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">s_probe2[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_probe2[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="label">tready</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="s_probe0">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">s_probe0[63:0]</obj_property>
+      <obj_property name="ObjectShortName">s_probe0[63:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">data</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="s_probe1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">s_probe1[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_probe1[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">tvalid</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="s_probe3">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">s_probe3[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_probe3[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">tlast</obj_property>
    </wvobject>
 </wave_config>

@@ -1,6 +1,6 @@
-verilog xil_defaultlib -i "../../../../../../../../../../../tools/Xilinx/2025.1/data/rsb/busdef" --include "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl" --include "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a9be" \
+verilog xil_defaultlib -i "../../../../../../../../../../../tools/2025.2/data/rsb/busdef" --include "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl" --include "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a415" \
 "../../../bd/microblaze/ip/microblaze_lmb_bram_0/sim/microblaze_lmb_bram_0.v" \
-"../../../bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/sim/microblaze_microblaze_0_axi_periph_imp_xbar_0.v" \
+"../../../bd/microblaze/ip/microblaze_microblaze_0_axi_periph_upgraded_ipi_imp_xbar_0/sim/microblaze_microblaze_0_axi_periph_upgraded_ipi_imp_xbar_0.v" \
 "../../../bd/microblaze/ip/microblaze_microblaze_0_xlconcat_0/sim/microblaze_microblaze_0_xlconcat_0.v" \
 "../../../bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_clk_wiz.v" \
 "../../../bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.v" \

@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Sat Aug  9 12:03:29 2025
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:16:20 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_microblaze_0_axi_periph_imp_auto_us_0 -prefix
 //               microblaze_microblaze_0_axi_periph_imp_auto_us_0_ microblaze_microblaze_0_axi_periph_imp_auto_us_0_sim_netlist.v
@@ -13,7 +13,7 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer
    (\USE_WRITE.wr_cmd_valid ,
     p_89_in,
     \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_MESG_Q_reg[27] ,
@@ -383,8 +383,8 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .R(\USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_36_a_upsizer" *) 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0
+(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_37_a_upsizer" *) 
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0
    (\USE_READ.rd_cmd_valid ,
     s_axi_rready_0,
     \current_word_1_reg[2] ,
@@ -530,7 +530,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .R(\USE_RTL_VALID_WRITE.buffer_Full_q_reg ));
 endmodule
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer
    (m_axi_awlen,
     m_axi_awburst,
     m_axi_awaddr,
@@ -934,7 +934,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
   wire wstrb_wrap_buffer_6;
   wire wstrb_wrap_buffer_7;
 
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice \USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice \USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst 
        (.E(\r.r_pipe/p_1_in ),
         .Q({M_AXI_RLAST,mr_rresp,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_6 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_7 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_8 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_9 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_10 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_11 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_12 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_13 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_14 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_15 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_16 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_17 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_18 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_19 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_20 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_21 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_22 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_23 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_24 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_25 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_26 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_27 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_28 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_29 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_30 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_31 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_32 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_33 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_34 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_35 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_36 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_37 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_38 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_39 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_40 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_41 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_42 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_43 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_44 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_45 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_46 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_47 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_48 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_49 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_50 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_51 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_52 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_53 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_54 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_55 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_56 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_57 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_58 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_59 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_60 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_61 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_62 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_63 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_64 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_65 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_66 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_67 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_68 ,\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_69 }),
         .\USE_RTL_LENGTH.first_mi_word_q_reg (\USE_READ.gen_non_fifo_r_upsizer.read_data_inst_n_6 ),
@@ -948,7 +948,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .pop_mi_data(pop_mi_data),
         .s_ready_i_reg(s_ready_i_reg),
         .s_ready_i_reg_0(si_register_slice_inst_n_0));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer \USE_READ.gen_non_fifo_r_upsizer.read_data_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer \USE_READ.gen_non_fifo_r_upsizer.read_data_inst 
        (.D(pre_next_word),
         .E(\r.r_pipe/p_1_in ),
         .\M_AXI_RDATA_I_reg[0]_0 (\USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst_n_1 ),
@@ -980,7 +980,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .use_wrap_buffer_reg_3(\USE_READ.read_addr_inst_n_1 ),
         .wrap_buffer_available(wrap_buffer_available),
         .wrap_buffer_available_reg_0(\USE_READ.gen_non_fifo_r_upsizer.read_data_inst_n_8 ));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0 \USE_READ.read_addr_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0 \USE_READ.read_addr_inst 
        (.D(pre_next_word),
         .E(sr_arvalid),
         .Q({\USE_READ.rd_cmd_fix ,\USE_READ.read_addr_inst_n_8 ,\USE_READ.read_addr_inst_n_9 ,\USE_READ.read_addr_inst_n_10 ,\USE_READ.read_addr_inst_n_11 ,\USE_READ.read_addr_inst_n_12 ,\USE_READ.read_addr_inst_n_13 ,\USE_READ.read_addr_inst_n_14 ,\USE_READ.read_addr_inst_n_15 ,\USE_READ.read_addr_inst_n_16 ,\USE_READ.read_addr_inst_n_17 ,\USE_READ.read_addr_inst_n_18 ,\USE_READ.read_addr_inst_n_19 }),
@@ -1013,7 +1013,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .s_axi_rvalid(s_axi_rvalid),
         .use_wrap_buffer(use_wrap_buffer),
         .wrap_buffer_available(wrap_buffer_available));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer \USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer \USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst 
        (.D(pre_next_word_2),
         .E(pop_si_data),
         .Q({\USE_WRITE.wr_cmd_fix ,\USE_WRITE.wr_cmd_modified ,\USE_WRITE.wr_cmd_packed_wrap ,\USE_WRITE.wr_cmd_first_word ,\USE_WRITE.write_addr_inst_n_20 ,\USE_WRITE.write_addr_inst_n_21 ,cmd_last_word,\USE_WRITE.write_addr_inst_n_23 ,\USE_WRITE.write_addr_inst_n_24 ,\USE_WRITE.write_addr_inst_n_25 ,\USE_WRITE.write_addr_inst_n_26 ,\USE_WRITE.write_addr_inst_n_27 ,\USE_WRITE.write_addr_inst_n_28 ,\USE_WRITE.write_addr_inst_n_29 ,\USE_WRITE.write_addr_inst_n_30 }),
@@ -1098,7 +1098,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .wstrb_wrap_buffer_5(wstrb_wrap_buffer_5),
         .wstrb_wrap_buffer_6(wstrb_wrap_buffer_6),
         .wstrb_wrap_buffer_7(wstrb_wrap_buffer_7));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer \USE_WRITE.write_addr_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer \USE_WRITE.write_addr_inst 
        (.D(pre_next_word_2),
         .E(sr_awvalid),
         .Q({\USE_WRITE.wr_cmd_fix ,\USE_WRITE.wr_cmd_modified ,\USE_WRITE.wr_cmd_packed_wrap ,\USE_WRITE.wr_cmd_first_word ,\USE_WRITE.write_addr_inst_n_20 ,\USE_WRITE.write_addr_inst_n_21 ,cmd_last_word,\USE_WRITE.write_addr_inst_n_23 ,\USE_WRITE.write_addr_inst_n_24 ,\USE_WRITE.write_addr_inst_n_25 ,\USE_WRITE.write_addr_inst_n_26 ,\USE_WRITE.write_addr_inst_n_27 ,\USE_WRITE.write_addr_inst_n_28 ,\USE_WRITE.write_addr_inst_n_29 ,\USE_WRITE.write_addr_inst_n_30 }),
@@ -1186,7 +1186,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .wstrb_wrap_buffer_5(wstrb_wrap_buffer_5),
         .wstrb_wrap_buffer_6(wstrb_wrap_buffer_6),
         .wstrb_wrap_buffer_7(wstrb_wrap_buffer_7));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0 si_register_slice_inst
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0 si_register_slice_inst
        (.D(D),
         .E(sr_awvalid),
         .Q(Q),
@@ -1213,7 +1213,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .s_ready_i_reg_0(\USE_WRITE.write_addr_inst_n_117 ));
 endmodule
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer
    (\USE_RTL_LENGTH.first_mi_word_q ,
     first_word,
     s_axi_rlast,
@@ -2447,7 +2447,7 @@ endmodule
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
 (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top
    (s_axi_aclk,
     s_axi_aresetn,
     s_axi_awid,
@@ -2685,7 +2685,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
   assign s_axi_rid[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer \gen_upsizer.gen_full_upsizer.axi_upsizer_inst 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer \gen_upsizer.gen_full_upsizer.axi_upsizer_inst 
        (.D({s_axi_awregion,s_axi_awqos,s_axi_awlock,s_axi_awlen,s_axi_awcache,s_axi_awburst,s_axi_awsize,s_axi_awprot,s_axi_awaddr}),
         .Q({m_axi_awregion,m_axi_awqos,m_axi_awlock,m_axi_awcache,m_axi_awprot}),
         .\USE_REGISTER.M_AXI_WVALID_q_reg (m_axi_wvalid),
@@ -2730,7 +2730,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .s_ready_i_reg(m_axi_rready));
 endmodule
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer
    (\USE_RTL_CURR_WORD.first_word_q ,
     s_axi_aresetn,
     \WORD_LANE[0].USE_ALWAYS_PACKER.BYTE_LANE[0].USE_RTL_DATA.wstrb_wrap_buffer_q_reg[0]_0 ,
@@ -4343,7 +4343,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
         .R(s_axi_aresetn));
 endmodule
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice
    (s_ready_i_reg,
     mr_rvalid,
     pop_mi_data,
@@ -4385,7 +4385,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
   wire s_ready_i_reg;
   wire s_ready_i_reg_0;
 
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2 \r.r_pipe 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2 \r.r_pipe 
        (.E(E),
         .Q(Q),
         .\USE_RTL_LENGTH.first_mi_word_q_reg (\USE_RTL_LENGTH.first_mi_word_q_reg ),
@@ -4401,8 +4401,8 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
         .s_ready_i_reg_1(s_ready_i_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_35_axi_register_slice" *) 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_36_axi_register_slice" *) 
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0
    (\aresetn_d_reg[0] ,
     \aresetn_d_reg[1] ,
     E,
@@ -4477,7 +4477,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
   wire s_ready_i_reg;
   wire s_ready_i_reg_0;
 
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice \ar.ar_pipe 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice \ar.ar_pipe 
        (.E(m_valid_i_reg_inv),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(m_axi_arburst),
@@ -4491,7 +4491,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
         .s_ready_i_reg_1(s_ready_i_reg),
         .s_ready_i_reg_2(\aresetn_d_reg[1] ),
         .s_ready_i_reg_3(\aresetn_d_reg[0] ));
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0 \aw.aw_pipe 
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0 \aw.aw_pipe 
        (.D(D),
         .E(E),
         .Q(Q),
@@ -4508,7 +4508,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
         .s_ready_i_reg_0(s_ready_i_reg_0));
 endmodule
 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice
    (E,
     \m_payload_i_reg[39]_0 ,
     s_axi_arready,
@@ -5704,8 +5704,8 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_35_axic_register_slice" *) 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_36_axic_register_slice" *) 
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0
    (\aresetn_d_reg[0]_0 ,
     \aresetn_d_reg[1]_0 ,
     E,
@@ -6989,8 +6989,8 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_35_axic_register_slice" *) 
-module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2
+(* ORIG_REF_NAME = "axi_register_slice_v2_1_36_axic_register_slice" *) 
+module microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2
    (s_ready_i_reg_0,
     m_valid_i_reg_0,
     pop_mi_data,
@@ -8687,7 +8687,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_
   wire \USE_REGISTER.M_AXI_WVALID_q_i_5_n_0 ;
   wire \USE_REGISTER.M_AXI_WVALID_q_i_6_n_0 ;
   wire \USE_REGISTER.M_AXI_WVALID_q_reg ;
-  wire \USE_RTL_ADDR.addr_q ;
+  wire [0:0]\USE_RTL_ADDR.addr_q ;
   wire \USE_RTL_ADDR.addr_q[0]_i_1_n_0 ;
   wire \USE_RTL_ADDR.addr_q[1]_i_1_n_0 ;
   wire \USE_RTL_ADDR.addr_q[2]_i_1_n_0 ;
@@ -10740,7 +10740,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_
   wire \USE_READ.rd_cmd_modified ;
   wire [2:2]\USE_READ.rd_cmd_offset ;
   wire \USE_READ.rd_cmd_packed_wrap ;
-  wire \USE_RTL_ADDR.addr_q ;
+  wire [0:0]\USE_RTL_ADDR.addr_q ;
   wire \USE_RTL_ADDR.addr_q[0]_i_1__0_n_0 ;
   wire \USE_RTL_ADDR.addr_q[1]_i_1__0_n_0 ;
   wire \USE_RTL_ADDR.addr_q[2]_i_1__0_n_0 ;
@@ -11686,7 +11686,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0_generic_baseblocks_v2_1_
         .O(s_axi_rready_0));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_dwidth_converter_v2_1_36_top,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "axi_dwidth_converter_v2_1_37_top,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_microblaze_0_axi_periph_imp_auto_us_0
    (s_axi_aclk,
@@ -11935,7 +11935,7 @@ module microblaze_microblaze_0_axi_periph_imp_auto_us_0
   (* P_AXILITE = "2" *) 
   (* P_CONVERSION = "2" *) 
   (* P_MAX_SPLIT_BEATS = "16" *) 
-  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top inst
+  microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top inst
        (.m_axi_aclk(1'b0),
         .m_axi_araddr(m_axi_araddr),
         .m_axi_arburst(m_axi_arburst),

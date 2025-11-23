@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Thu Jul 31 21:13:23 2025
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:15:56 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_axi_gpio_1_0 -prefix
 //               microblaze_axi_gpio_1_0_ microblaze_axi_gpio_1_0_sim_netlist.v
@@ -38,7 +38,7 @@ module microblaze_axi_gpio_1_0_GPIO_Core
   input [1:0]gpio_io_i;
   input s_axi_aclk;
   input bus2ip_reset;
-  input bus2ip_cs;
+  input [0:0]bus2ip_cs;
   input bus2ip_rnw;
   input [3:0]s_axi_wdata;
   input [0:0]Q;
@@ -64,7 +64,7 @@ module microblaze_axi_gpio_1_0_GPIO_Core
   wire \Not_Dual.gpio_Data_Out[1]_i_1_n_0 ;
   wire \Not_Dual.gpio_Data_Out_reg[0]_0 ;
   wire [0:0]Q;
-  wire bus2ip_cs;
+  wire [0:0]bus2ip_cs;
   wire bus2ip_reset;
   wire bus2ip_rnw;
   wire [1:0]gpio_io_i;
@@ -248,7 +248,7 @@ module microblaze_axi_gpio_1_0_address_decoder
   output \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ;
   output \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ;
   output Bus_RNW_reg;
-  output bus2ip_cs;
+  output [0:0]bus2ip_cs;
   output rst_reg;
   output ip2bus_rdack_i_D1_reg;
   output ip2bus_wrack_i_D1_reg;
@@ -274,7 +274,7 @@ module microblaze_axi_gpio_1_0_address_decoder
   wire [2:0]\Not_Dual.gpio_Data_Out_reg[0] ;
   wire Q;
   wire [0:0]SR;
-  wire bus2ip_cs;
+  wire [0:0]bus2ip_cs;
   wire bus2ip_rnw;
   wire ce_expnd_i_0;
   wire ce_expnd_i_1;
@@ -471,7 +471,7 @@ module microblaze_axi_gpio_1_0_axi_gpio
   wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ;
   wire \I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ;
   wire [5:5]bus2ip_addr;
-  wire bus2ip_cs;
+  wire [0:0]bus2ip_cs;
   wire bus2ip_reset;
   wire bus2ip_rnw;
   wire [1:0]gpio_io_i;
@@ -719,7 +719,7 @@ module microblaze_axi_gpio_1_0_axi_lite_ipif
   output Bus_RNW_reg;
   output s_axi_rvalid_i_reg;
   output s_axi_bvalid_i_reg;
-  output bus2ip_cs;
+  output [0:0]bus2ip_cs;
   output rst_reg;
   output ip2bus_rdack_i_D1_reg;
   output ip2bus_wrack_i_D1_reg;
@@ -743,7 +743,7 @@ module microblaze_axi_gpio_1_0_axi_lite_ipif
   wire \GEN_BKEND_CE_REGISTERS[2].ce_out_i_reg ;
   wire \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg ;
   wire [0:0]Q;
-  wire bus2ip_cs;
+  wire [0:0]bus2ip_cs;
   wire bus2ip_reset;
   wire bus2ip_rnw;
   wire ip2bus_rdack_i_D1;
@@ -795,7 +795,7 @@ module microblaze_axi_gpio_1_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_axi_gpio_1_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_axi_gpio_1_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_axi_gpio_1_0
    (s_axi_aclk,
@@ -820,7 +820,7 @@ module microblaze_axi_gpio_1_0
     gpio_io_o);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_mode = "slave S_AXI_ACLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *) input s_axi_aclk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_mode = "slave S_AXI_ARESETN" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_mode = "slave S_AXI" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
@@ -989,7 +989,7 @@ module microblaze_axi_gpio_1_0_slave_attachment
   output Bus_RNW_reg;
   output s_axi_rvalid_i_reg_0;
   output s_axi_bvalid_i_reg_0;
-  output bus2ip_cs;
+  output [0:0]bus2ip_cs;
   output rst_reg_0;
   output ip2bus_rdack_i_D1_reg;
   output ip2bus_wrack_i_D1_reg;
@@ -1023,7 +1023,7 @@ module microblaze_axi_gpio_1_0_slave_attachment
   wire [0:0]SR;
   wire [0:6]bus2ip_addr;
   wire \bus2ip_addr_i[8]_i_1_n_0 ;
-  wire bus2ip_cs;
+  wire [0:0]bus2ip_cs;
   wire bus2ip_rnw;
   wire clear;
   wire ip2bus_rdack_i_D1;
@@ -1047,7 +1047,7 @@ module microblaze_axi_gpio_1_0_slave_attachment
   wire [2:0]s_axi_awaddr;
   wire s_axi_awvalid;
   wire s_axi_bready;
-  wire s_axi_bresp_i;
+  wire [0:0]s_axi_bresp_i;
   wire s_axi_bvalid_i_i_1_n_0;
   wire s_axi_bvalid_i_reg_0;
   wire [2:0]s_axi_rdata;
@@ -1056,7 +1056,7 @@ module microblaze_axi_gpio_1_0_slave_attachment
   wire \s_axi_rdata_i[31]_i_1_n_0 ;
   wire [2:0]\s_axi_rdata_i_reg[31]_0 ;
   wire s_axi_rready;
-  wire s_axi_rresp_i;
+  wire [0:0]s_axi_rresp_i;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axi_rvalid_i_reg_0;
   wire s_axi_wvalid;
@@ -1482,7 +1482,7 @@ endmodule
 
 (* DEST_SYNC_FF = "4" *) (* INIT_SYNC_FF = "0" *) (* SIM_ASSERT_CHK = "0" *) 
 (* SRC_INPUT_REG = "0" *) (* VERSION = "0" *) (* WIDTH = "2" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "ARRAY_SINGLE" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* xpm_cdc = "ARRAY_SINGLE" *) 
 module microblaze_axi_gpio_1_0_xpm_cdc_array_single
    (src_clk,
     src_in,

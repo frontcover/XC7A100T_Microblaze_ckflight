@@ -61,7 +61,7 @@ microblaze_microblaze_0_axi_periph_imp_auto_cc_0_sc::microblaze_microblaze_0_axi
 
   // initialize module
     xsc::common_cpp::properties model_param_props;
-    model_param_props.addLong("C_AXI_ID_WIDTH", "1");
+    model_param_props.addLong("C_AXI_ID_WIDTH", "2");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "27");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "64");
     model_param_props.addLong("C_S_AXI_ACLK_RATIO", "1");

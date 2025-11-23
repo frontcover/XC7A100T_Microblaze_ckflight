@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"2.23056",
-   "Default View_TopLeft":"1886,1891",
+   "Default View_ScaleFactor":"1.16629",
+   "Default View_TopLeft":"465,-27",
    "ExpandedHierarchyInLayout":"",
    "HierExpandStatus_comment_0":"false",
    "HierExpandStatus_comment_1":"false",
@@ -24,105 +24,106 @@ Vivado generated related .xdc file for ddr. However top entity still needs to ha
    "font_comment_1":"21",
    "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0 TLS
 #  -string -flagsOSRD
-preplace port gpio_rtl_0 -pg 1 -lvl 8 -x 2510 -y 510 -defaultsOSRD
-preplace port gpio_rtl_1 -pg 1 -lvl 8 -x 2510 -y 810 -defaultsOSRD
-preplace port gpio_rtl_2 -pg 1 -lvl 8 -x 2510 -y 660 -defaultsOSRD
-preplace port uart_rtl_0 -pg 1 -lvl 8 -x 2510 -y 2030 -defaultsOSRD
-preplace port iic_rtl_0 -pg 1 -lvl 8 -x 2510 -y 950 -defaultsOSRD
-preplace port iic_rtl_1 -pg 1 -lvl 8 -x 2510 -y 1090 -defaultsOSRD
-preplace port DDR2_0 -pg 1 -lvl 8 -x 2510 -y 1410 -defaultsOSRD
-preplace port S_AXIS_S2MM_0 -pg 1 -lvl 0 -x -10 -y 230 -defaultsOSRD
-preplace port port-id_reset_rtl_0 -pg 1 -lvl 0 -x -10 -y 1360 -defaultsOSRD
-preplace port port-id_spi0_mosi -pg 1 -lvl 8 -x 2510 -y 1830 -defaultsOSRD
-preplace port port-id_spi0_miso -pg 1 -lvl 8 -x 2510 -y 1860 -defaultsOSRD -right
-preplace port port-id_spi0_sck -pg 1 -lvl 8 -x 2510 -y 1890 -defaultsOSRD
-preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x -10 -y 1500 -defaultsOSRD
-preplace port port-id_clk_out3_0 -pg 1 -lvl 8 -x 2510 -y 1190 -defaultsOSRD
-preplace portBus spi0_cs -pg 1 -lvl 8 -x 2510 -y 1920 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 5 -x 1400 -y 440 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 1860 -y 450 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 1860 -y 1020 -defaultsOSRD
-preplace inst microblaze_0_axi_intc -pg 1 -lvl 4 -x 960 -y 120 -defaultsOSRD
-preplace inst microblaze_0_xlconcat -pg 1 -lvl 3 -x 600 -y 130 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 4 -x 960 -y 640 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 300 -y 1490 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 3 -x 600 -y 1380 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2320 -y 510 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 7 -x 2320 -y 810 -defaultsOSRD
-preplace inst axi_gpio_2 -pg 1 -lvl 7 -x 2320 -y 670 -defaultsOSRD
-preplace inst axi_quad_spi_0 -pg 1 -lvl 7 -x 2320 -y 1870 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 7 -x 2320 -y 2040 -defaultsOSRD
-preplace inst axi_timer_0 -pg 1 -lvl 7 -x 2320 -y 1670 -defaultsOSRD
-preplace inst axi_iic_0 -pg 1 -lvl 7 -x 2320 -y 970 -defaultsOSRD
-preplace inst axi_iic_1 -pg 1 -lvl 7 -x 2320 -y 1110 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 7 -x 2320 -y 1450 -defaultsOSRD
-preplace inst rst_mig_7series_0_150M -pg 1 -lvl 5 -x 1400 -y 1630 -defaultsOSRD
-preplace inst axi_gpio_3 -pg 1 -lvl 7 -x 2320 -y 1270 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1400 -y 170 -defaultsOSRD
-preplace netloc axi_dma_0_s2mm_introut 1 2 4 400 0 NJ 0 NJ 0 1640
-preplace netloc axi_gpio_2_ip2intc_irpt 1 2 6 410 300 NJ 300 NJ 300 NJ 300 NJ 300 2460
-preplace netloc axi_iic_0_iic2intc_irpt 1 2 6 420 10 NJ 10 NJ 10 NJ 10 NJ 10 2480
-preplace netloc axi_quad_spi_0_io0_o 1 7 1 2460J 1830n
-preplace netloc axi_quad_spi_0_sck_o 1 7 1 2460J 1880n
-preplace netloc axi_quad_spi_0_ss_o 1 7 1 2460J 1900n
-preplace netloc clk_100MHz_1 1 0 2 NJ 1500 N
-preplace netloc clk_wiz_1_clk_out2 1 2 5 NJ 1480 NJ 1480 NJ 1480 1640J 1500 2160
-preplace netloc clk_wiz_1_clk_out3 1 2 6 NJ 1500 NJ 1500 NJ 1500 1630J 1510 2140J 1190 NJ
-preplace netloc clk_wiz_1_locked 1 2 1 410 1420n
-preplace netloc io1_i_1_1 1 7 1 NJ 1860
-preplace netloc mdm_1_debug_sys_rst 1 1 4 210 1400 420 1160 NJ 1160 1100
-preplace netloc microblaze_0_Clk 1 2 5 400 640 790 250 1150 550 1710 540 2130
-preplace netloc microblaze_0_axi_intc_irq 1 4 1 1130 130n
-preplace netloc microblaze_0_intr 1 3 1 N 130
-preplace netloc mig_7series_0_init_calib_complete 1 7 1 2480 1280n
-preplace netloc mig_7series_0_mmcm_locked 1 4 4 1160 1530 NJ 1530 2010J 1550 2460
-preplace netloc mig_7series_0_ui_clk 1 4 4 1120 1520 1660 1560 NJ 1560 2470
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 4 4 1170 1730 NJ 1730 2170J 1350 2460
-preplace netloc reset_rtl_0_1 1 0 3 NJ 1360 N 1360 NJ
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 3 3 810 540 NJ 540 1640J
-preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 3 4 NJ 1400 NJ 1400 1650J 1490 2150
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 3 2 780 480 NJ
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 3 4 800 240 1110 50 1680 530 2100
-preplace netloc rst_mig_7series_0_150M_peripheral_aresetn 1 5 2 1670 1520 2180J
-preplace netloc S_AXIS_S2MM_0_1 1 0 5 NJ 230 N 230 NJ 230 NJ 230 1120J
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1700 110n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1650 130n
-preplace netloc axi_gpio_0_GPIO 1 7 1 NJ 510
-preplace netloc axi_gpio_1_GPIO 1 7 1 NJ 810
-preplace netloc axi_gpio_2_GPIO 1 7 1 NJ 660
-preplace netloc axi_iic_0_IIC 1 7 1 NJ 950
-preplace netloc axi_iic_1_IIC 1 7 1 NJ 1090
-preplace netloc axi_uartlite_0_UART 1 7 1 NJ 2030
-preplace netloc microblaze_0_axi_dp 1 5 1 1690 460n
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 2040 490n
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 2060 790n
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 6 1 2050 650n
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 6 1 2030 990n
-preplace netloc microblaze_0_axi_periph_M07_AXI 1 6 1 2080 1030n
-preplace netloc microblaze_0_axi_periph_M08_AXI 1 6 1 2110 1050n
-preplace netloc microblaze_0_axi_periph_M09_AXI 1 6 1 2070 950n
-preplace netloc microblaze_0_axi_periph_M10_AXI 1 6 1 N 1090
-preplace netloc microblaze_0_axi_periph_M11_AXI 1 6 1 2120 1110n
-preplace netloc microblaze_0_axi_periph_M12_AXI 1 6 1 2010 1130n
-preplace netloc microblaze_0_axi_periph_M13_AXI 1 4 3 1160 320 NJ 320 2020
-preplace netloc microblaze_0_debug 1 4 1 1160 440n
-preplace netloc microblaze_0_dlmb_1 1 5 1 N 420
-preplace netloc microblaze_0_ilmb_1 1 5 1 N 440
-preplace netloc microblaze_0_intc_axi 1 3 4 820 290 NJ 290 NJ 290 2030
-preplace netloc microblaze_0_interrupt 1 4 1 1140 110n
-preplace netloc microblaze_0_mdm_axi 1 3 4 820 340 NJ 340 NJ 340 2010
-preplace netloc mig_7series_0_DDR2 1 7 1 NJ 1410
+preplace port gpio_rtl_0 -pg 1 -lvl 7 -x 2670 -y 510 -defaultsOSRD
+preplace port gpio_rtl_1 -pg 1 -lvl 7 -x 2670 -y 810 -defaultsOSRD
+preplace port gpio_rtl_2 -pg 1 -lvl 7 -x 2670 -y 660 -defaultsOSRD
+preplace port uart_rtl_0 -pg 1 -lvl 7 -x 2670 -y 2030 -defaultsOSRD
+preplace port iic_rtl_0 -pg 1 -lvl 7 -x 2670 -y 950 -defaultsOSRD
+preplace port iic_rtl_1 -pg 1 -lvl 7 -x 2670 -y 1090 -defaultsOSRD
+preplace port DDR2_0 -pg 1 -lvl 7 -x 2670 -y 1410 -defaultsOSRD
+preplace port S_AXIS_S2MM_0 -pg 1 -lvl 0 -x -120 -y 230 -defaultsOSRD
+preplace port port-id_reset_rtl_0 -pg 1 -lvl 0 -x -120 -y 1360 -defaultsOSRD
+preplace port port-id_spi0_mosi -pg 1 -lvl 7 -x 2670 -y 1830 -defaultsOSRD
+preplace port port-id_spi0_miso -pg 1 -lvl 7 -x 2670 -y 1860 -defaultsOSRD -right
+preplace port port-id_spi0_sck -pg 1 -lvl 7 -x 2670 -y 1890 -defaultsOSRD
+preplace port port-id_clk_100MHz -pg 1 -lvl 0 -x -120 -y 1500 -defaultsOSRD
+preplace port port-id_clk_out3_0 -pg 1 -lvl 7 -x 2670 -y 1190 -defaultsOSRD
+preplace portBus spi0_cs -pg 1 -lvl 7 -x 2670 -y 1920 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -x 1510 -y 570 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -x 2020 -y 450 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 5 -x 2020 -y 1020 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 3 -x 1080 -y 120 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -x 670 -y 180 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -x 1080 -y 640 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 1 -x 300 -y 1490 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -x 670 -y 1380 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 6 -x 2480 -y 510 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 6 -x 2480 -y 810 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 6 -x 2480 -y 670 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 6 -x 2480 -y 1870 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -x 2480 -y 2040 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 6 -x 2480 -y 1670 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 6 -x 2480 -y 970 -defaultsOSRD
+preplace inst axi_iic_1 -pg 1 -lvl 6 -x 2480 -y 1110 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 6 -x 2480 -y 1450 -defaultsOSRD
+preplace inst rst_mig_7series_0_150M -pg 1 -lvl 4 -x 1510 -y 1890 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 6 -x 2480 -y 1270 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1510 -y 170 -defaultsOSRD
+preplace netloc axi_dma_0_s2mm_introut 1 1 4 490 290 NJ 290 NJ 290 1740
+preplace netloc axi_gpio_2_ip2intc_irpt 1 1 6 470 450 NJ 450 NJ 450 1830J 530 2210J 590 2620
+preplace netloc axi_iic_0_iic2intc_irpt 1 1 6 480 310 NJ 310 NJ 310 NJ 310 NJ 310 2650
+preplace netloc axi_quad_spi_0_io0_o 1 6 1 2620J 1830n
+preplace netloc axi_quad_spi_0_sck_o 1 6 1 2640J 1880n
+preplace netloc axi_quad_spi_0_ss_o 1 6 1 2620J 1900n
+preplace netloc clk_100MHz_1 1 0 1 NJ 1500
+preplace netloc clk_wiz_1_clk_out2 1 1 5 390J 1510 NJ 1510 NJ 1510 NJ 1510 2330
+preplace netloc clk_wiz_1_clk_out3 1 1 6 NJ 1500 NJ 1500 NJ 1500 NJ 1500 2300J 1190 NJ
+preplace netloc clk_wiz_1_locked 1 1 1 490 1420n
+preplace netloc io1_i_1_1 1 6 1 NJ 1860
+preplace netloc mdm_1_debug_sys_rst 1 0 4 210 1400 470 1480 NJ 1480 1220
+preplace netloc microblaze_0_Clk 1 1 5 460 650 890 320 1260 460 1850 540 2280
+preplace netloc microblaze_0_axi_intc_irq 1 3 1 1230 130n
+preplace netloc microblaze_0_intr 1 2 1 900 130n
+preplace netloc mig_7series_0_init_calib_complete 1 6 1 2650 1280n
+preplace netloc mig_7series_0_mmcm_locked 1 3 4 1240 1530 NJ 1530 2320J 1350 2640
+preplace netloc mig_7series_0_ui_clk 1 3 4 1280 1560 1860 1560 NJ 1560 2620
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 3 4 1260 1550 NJ 1550 NJ 1550 2630
+preplace netloc reset_rtl_0_1 1 0 2 NJ 1360 NJ
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 3 930 470 NJ 470 1820J
+preplace netloc rst_clk_wiz_1_100M_interconnect_aresetn 1 2 4 NJ 1400 NJ 1400 1740J 1490 2310
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 2 920 720 1280J
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 4 910 230 1270 270 1800 550 2290
+preplace netloc rst_mig_7series_0_150M_peripheral_aresetn 1 4 2 1870 1520 2340J
+preplace netloc S_AXIS_S2MM_0_1 1 0 4 NJ 230 390J 270 NJ 270 1220J
+preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 1840 150n
+preplace netloc axi_gpio_0_GPIO 1 6 1 NJ 510
+preplace netloc axi_gpio_1_GPIO 1 6 1 NJ 810
+preplace netloc axi_gpio_2_GPIO 1 6 1 NJ 660
+preplace netloc axi_iic_0_IIC 1 6 1 NJ 950
+preplace netloc axi_iic_1_IIC 1 6 1 NJ 1090
+preplace netloc axi_uartlite_0_UART 1 6 1 NJ 2030
+preplace netloc microblaze_0_axi_dp 1 4 1 1740 590n
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 5 1 2200 490n
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 5 1 2220 790n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 5 1 2210 650n
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 5 1 2250 990n
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 5 1 2210 1030n
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 5 1 2240 1050n
+preplace netloc microblaze_0_axi_periph_M09_AXI 1 5 1 2230 950n
+preplace netloc microblaze_0_axi_periph_M10_AXI 1 5 1 N 1090
+preplace netloc microblaze_0_axi_periph_M11_AXI 1 5 1 2230 1110n
+preplace netloc microblaze_0_axi_periph_M12_AXI 1 5 1 2220 1130n
+preplace netloc microblaze_0_axi_periph_M13_AXI 1 3 3 1280 280 NJ 280 2190
+preplace netloc microblaze_0_debug 1 3 1 1270 570n
+preplace netloc microblaze_0_dlmb_1 1 4 1 1740 420n
+preplace netloc microblaze_0_ilmb_1 1 4 1 1810 440n
+preplace netloc microblaze_0_intc_axi 1 2 4 940 10 NJ 10 NJ 10 2180
+preplace netloc microblaze_0_interrupt 1 3 1 1240 110n
+preplace netloc microblaze_0_mdm_axi 1 2 4 940 360 NJ 360 NJ 360 2170
+preplace netloc mig_7series_0_DDR2 1 6 1 NJ 1410
 preplace cgraphic comment_1 place left -1323 -435 textcolor 4 linecolor 3 linewidth 2
 preplace cgraphic comment_0 place left -1313 -759 textcolor 4 linecolor 3 linewidth 2
-levelinfo -pg 1 -10 110 300 600 960 1400 1860 2320 2510
-pagesize -pg 1 -db -bbox -sgen -170 -10 2650 2320
+levelinfo -pg 1 -120 300 670 1080 1510 2020 2480 2670
+pagesize -pg 1 -db -bbox -sgen -280 -190 2860 2320
 "
 }
 {
-   """da_axi4_cnt""":"20",
-   """da_board_cnt""":"19",
-   """da_clkrst_cnt""":"3",
-   """da_mb_cnt""":"2"
+   """""da_axi4_cnt""""":"20",
+   """""da_board_cnt""""":"19",
+   """""da_clkrst_cnt""""":"3",
+   """""da_mb_cnt""""":"2",
+   ""da_axi4_cnt"":"3",
+   ""da_clkrst_cnt"":"1"
 }
 {
    "/comment_0":"comment_0",

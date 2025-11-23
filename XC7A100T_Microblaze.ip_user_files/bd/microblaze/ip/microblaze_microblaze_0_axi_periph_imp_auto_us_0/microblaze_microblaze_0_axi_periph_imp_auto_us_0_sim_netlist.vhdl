@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sat Aug  9 12:03:29 2025
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Sun Nov 23 14:16:20 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_microblaze_0_axi_periph_imp_auto_us_0 -prefix
 --               microblaze_microblaze_0_axi_periph_imp_auto_us_0_
@@ -16,7 +16,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer is
   port (
     \USE_RTL_LENGTH.first_mi_word_q\ : out STD_LOGIC;
     first_word : out STD_LOGIC;
@@ -50,9 +50,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \current_word_1_reg[2]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer is
   signal M_AXI_RDATA_I : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal \USE_RTL_ADDR.addr_q[4]_i_5_n_0\ : STD_LOGIC;
   signal \USE_RTL_ADDR.addr_q[4]_i_6_n_0\ : STD_LOGIC;
@@ -1563,7 +1563,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer is
   port (
     \USE_RTL_CURR_WORD.first_word_q\ : out STD_LOGIC;
     s_axi_aresetn : out STD_LOGIC;
@@ -1650,9 +1650,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     \WORD_LANE[1].USE_ALWAYS_PACKER.BYTE_LANE[3].USE_RTL_DATA.USE_REGISTER.M_AXI_WDATA_I_reg[63]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \WORD_LANE[1].USE_ALWAYS_PACKER.BYTE_LANE[3].USE_RTL_DATA.USE_REGISTER.M_AXI_WDATA_I_reg[63]_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer is
   signal \^use_ff_out.use_rtl_output_pipeline.m_mesg_q_reg[7]\ : STD_LOGIC;
   signal \USE_REGISTER.M_AXI_WLAST_q_i_1_n_0\ : STD_LOGIC;
   signal \USE_REGISTER.M_AXI_WVALID_q_i_8_n_0\ : STD_LOGIC;
@@ -3497,7 +3497,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice is
   port (
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[39]_0\ : out STD_LOGIC_VECTOR ( 27 downto 0 );
@@ -3513,9 +3513,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
     \m_payload_i_reg[61]_1\ : in STD_LOGIC_VECTOR ( 60 downto 0 );
     s_ready_i_reg_3 : in STD_LOGIC
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \USE_RTL_FIFO.data_srl_reg[31][18]_srl32_i_2_n_0\ : STD_LOGIC;
   signal \USE_RTL_FIFO.data_srl_reg[31][18]_srl32_i_3_n_0\ : STD_LOGIC;
@@ -5052,7 +5052,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0 is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0 is
   port (
     \aresetn_d_reg[0]_0\ : out STD_LOGIC;
     \aresetn_d_reg[1]_0\ : out STD_LOGIC;
@@ -5070,10 +5070,10 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
     D : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0 : entity is "axi_register_slice_v2_1_35_axic_register_slice";
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0;
+  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0 : entity is "axi_register_slice_v2_1_36_axic_register_slice";
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0 is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0 is
   signal \^e\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \^q\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal \USE_RTL_FIFO.data_srl_reg[31][13]_srl32_i_2_n_0\ : STD_LOGIC;
@@ -6726,7 +6726,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2\ is
+entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2\ is
   port (
     s_ready_i_reg_0 : out STD_LOGIC;
     m_valid_i_reg_0 : out STD_LOGIC;
@@ -6743,10 +6743,10 @@ entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_35_axic_register_slice";
-end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2\;
+  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2\ : entity is "axi_register_slice_v2_1_36_axic_register_slice";
+end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2\;
 
-architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2\ is
+architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2\ is
   signal m_valid_i_i_1_n_0 : STD_LOGIC;
   signal \^m_valid_i_reg_0\ : STD_LOGIC;
   signal s_ready_i_i_1_n_0 : STD_LOGIC;
@@ -8799,7 +8799,7 @@ architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_gener
   signal \USE_REGISTER.M_AXI_WVALID_q_i_4_n_0\ : STD_LOGIC;
   signal \USE_REGISTER.M_AXI_WVALID_q_i_5_n_0\ : STD_LOGIC;
   signal \USE_REGISTER.M_AXI_WVALID_q_i_6_n_0\ : STD_LOGIC;
-  signal \USE_RTL_ADDR.addr_q\ : STD_LOGIC;
+  signal \USE_RTL_ADDR.addr_q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \USE_RTL_ADDR.addr_q[0]_i_1_n_0\ : STD_LOGIC;
   signal \USE_RTL_ADDR.addr_q[1]_i_1_n_0\ : STD_LOGIC;
   signal \USE_RTL_ADDR.addr_q[2]_i_1_n_0\ : STD_LOGIC;
@@ -9359,7 +9359,7 @@ begin
       I3 => \USE_RTL_VALID_WRITE.buffer_Full_q\,
       I4 => E(0),
       I5 => cmd_push_block,
-      O => \USE_RTL_ADDR.addr_q\
+      O => \USE_RTL_ADDR.addr_q\(0)
     );
 \USE_RTL_ADDR.addr_q[4]_i_2\: unisim.vcomponents.LUT6
     generic map(
@@ -9392,7 +9392,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[0]_i_1_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(0),
       R => \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_1\
@@ -9403,7 +9403,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[1]_i_1_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(1),
       R => \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_1\
@@ -9414,7 +9414,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[2]_i_1_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(2),
       R => \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_1\
@@ -9425,7 +9425,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[3]_i_1_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(3),
       R => \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_1\
@@ -9436,7 +9436,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[4]_i_2_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(4),
       R => \USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_1\
@@ -11331,7 +11331,7 @@ architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_gener
   signal \USE_READ.rd_cmd_modified\ : STD_LOGIC;
   signal \USE_READ.rd_cmd_offset\ : STD_LOGIC_VECTOR ( 2 to 2 );
   signal \USE_READ.rd_cmd_packed_wrap\ : STD_LOGIC;
-  signal \USE_RTL_ADDR.addr_q\ : STD_LOGIC;
+  signal \USE_RTL_ADDR.addr_q\ : STD_LOGIC_VECTOR ( 0 to 0 );
   signal \USE_RTL_ADDR.addr_q[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \USE_RTL_ADDR.addr_q[1]_i_1__0_n_0\ : STD_LOGIC;
   signal \USE_RTL_ADDR.addr_q[2]_i_1__0_n_0\ : STD_LOGIC;
@@ -11816,7 +11816,7 @@ begin
       I3 => \USE_RTL_VALID_WRITE.buffer_Full_q\,
       I4 => E(0),
       I5 => cmd_push_block,
-      O => \USE_RTL_ADDR.addr_q\
+      O => \USE_RTL_ADDR.addr_q\(0)
     );
 \USE_RTL_ADDR.addr_q[4]_i_2__0\: unisim.vcomponents.LUT6
     generic map(
@@ -11850,7 +11850,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[0]_i_1__0_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(0),
       R => \USE_RTL_VALID_WRITE.buffer_Full_q_reg_0\
@@ -11861,7 +11861,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[1]_i_1__0_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(1),
       R => \USE_RTL_VALID_WRITE.buffer_Full_q_reg_0\
@@ -11872,7 +11872,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[2]_i_1__0_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(2),
       R => \USE_RTL_VALID_WRITE.buffer_Full_q_reg_0\
@@ -11883,7 +11883,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[3]_i_1__0_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(3),
       R => \USE_RTL_VALID_WRITE.buffer_Full_q_reg_0\
@@ -11894,7 +11894,7 @@ begin
     )
         port map (
       C => \USE_RTL_ADDR.addr_q_reg[4]_0\,
-      CE => \USE_RTL_ADDR.addr_q\,
+      CE => \USE_RTL_ADDR.addr_q\(0),
       D => \USE_RTL_ADDR.addr_q[4]_i_2__0_n_0\,
       Q => \USE_RTL_ADDR.addr_q_reg\(4),
       R => \USE_RTL_VALID_WRITE.buffer_Full_q_reg_0\
@@ -12530,7 +12530,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer is
   port (
     \USE_WRITE.wr_cmd_valid\ : out STD_LOGIC;
     p_89_in : out STD_LOGIC;
@@ -12620,9 +12620,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     m_axi_awready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer is
   signal cmd_push_block : STD_LOGIC;
   signal cmd_push_block0 : STD_LOGIC;
   signal s_axi_wstrb_0_sn_1 : STD_LOGIC;
@@ -12742,7 +12742,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0\ is
+entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0\ is
   port (
     \USE_READ.rd_cmd_valid\ : out STD_LOGIC;
     s_axi_rready_0 : out STD_LOGIC;
@@ -12778,10 +12778,10 @@ entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0\ : entity is "axi_dwidth_converter_v2_1_36_a_upsizer";
-end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0\;
+  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0\ : entity is "axi_dwidth_converter_v2_1_37_a_upsizer";
+end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0\;
 
-architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0\ is
+architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0\ is
   signal cmd_push_block : STD_LOGIC;
   signal cmd_push_block0 : STD_LOGIC;
 begin
@@ -12838,7 +12838,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice is
   port (
     s_ready_i_reg : out STD_LOGIC;
     mr_rvalid : out STD_LOGIC;
@@ -12854,11 +12854,11 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_
     s_ready_i_reg_0 : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice is
 begin
-\r.r_pipe\: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice__parameterized2\
+\r.r_pipe\: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice__parameterized2\
      port map (
       E(0) => E(0),
       Q(66 downto 0) => Q(66 downto 0),
@@ -12879,7 +12879,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0\ is
+entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0\ is
   port (
     \aresetn_d_reg[0]\ : out STD_LOGIC;
     \aresetn_d_reg[1]\ : out STD_LOGIC;
@@ -12907,16 +12907,16 @@ entity \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1
     \m_payload_i_reg[61]_0\ : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0\ : entity is "axi_register_slice_v2_1_35_axi_register_slice";
-end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0\;
+  attribute ORIG_REF_NAME of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0\ : entity is "axi_register_slice_v2_1_36_axi_register_slice";
+end \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0\;
 
-architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0\ is
+architecture STRUCTURE of \microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0\ is
   signal \^aresetn_d_reg[0]\ : STD_LOGIC;
   signal \^aresetn_d_reg[1]\ : STD_LOGIC;
 begin
   \aresetn_d_reg[0]\ <= \^aresetn_d_reg[0]\;
   \aresetn_d_reg[1]\ <= \^aresetn_d_reg[1]\;
-\ar.ar_pipe\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice
+\ar.ar_pipe\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice
      port map (
       E(0) => m_valid_i_reg_inv(0),
       m_axi_araddr(2 downto 0) => m_axi_araddr(2 downto 0),
@@ -12932,7 +12932,7 @@ begin
       s_ready_i_reg_2 => \^aresetn_d_reg[1]\,
       s_ready_i_reg_3 => \^aresetn_d_reg[0]\
     );
-\aw.aw_pipe\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axic_register_slice_0
+\aw.aw_pipe\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axic_register_slice_0
      port map (
       D(60 downto 0) => D(60 downto 0),
       E(0) => E(0),
@@ -12954,7 +12954,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer is
   port (
     m_axi_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_axi_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -12999,9 +12999,9 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     m_axi_arready : in STD_LOGIC;
     m_axi_rvalid : in STD_LOGIC
   );
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer is
   signal \^m_axi_rlast\ : STD_LOGIC;
   signal \USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_10\ : STD_LOGIC;
   signal \USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst_n_11\ : STD_LOGIC;
@@ -13284,7 +13284,7 @@ begin
   \USE_REGISTER.M_AXI_WVALID_q_reg\ <= \^use_register.m_axi_wvalid_q_reg\;
   m_axi_arlen(7 downto 0) <= \^m_axi_arlen\(7 downto 0);
   m_axi_awlen(7 downto 0) <= \^m_axi_awlen\(7 downto 0);
-\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice
+\USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice
      port map (
       E(0) => \r.r_pipe/p_1_in\,
       Q(66) => \^m_axi_rlast\,
@@ -13365,7 +13365,7 @@ begin
       s_ready_i_reg => s_ready_i_reg,
       s_ready_i_reg_0 => si_register_slice_inst_n_0
     );
-\USE_READ.gen_non_fifo_r_upsizer.read_data_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_r_upsizer
+\USE_READ.gen_non_fifo_r_upsizer.read_data_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_r_upsizer
      port map (
       D(2 downto 0) => pre_next_word(2 downto 0),
       E(0) => \r.r_pipe/p_1_in\,
@@ -13476,7 +13476,7 @@ begin
       wrap_buffer_available => wrap_buffer_available,
       wrap_buffer_available_reg_0 => \USE_READ.gen_non_fifo_r_upsizer.read_data_inst_n_8\
     );
-\USE_READ.read_addr_inst\: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0\
+\USE_READ.read_addr_inst\: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer__parameterized0\
      port map (
       D(2 downto 0) => pre_next_word(2 downto 0),
       E(0) => sr_arvalid,
@@ -13539,7 +13539,7 @@ begin
       use_wrap_buffer => use_wrap_buffer,
       wrap_buffer_available => wrap_buffer_available
     );
-\USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_w_upsizer
+\USE_WRITE.gen_non_fifo_w_upsizer.write_data_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_w_upsizer
      port map (
       D(2 downto 0) => pre_next_word_2(2 downto 0),
       E(0) => pop_si_data,
@@ -13690,7 +13690,7 @@ begin
       wstrb_wrap_buffer_6 => wstrb_wrap_buffer_6,
       wstrb_wrap_buffer_7 => wstrb_wrap_buffer_7
     );
-\USE_WRITE.write_addr_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_a_upsizer
+\USE_WRITE.write_addr_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_a_upsizer
      port map (
       D(2 downto 0) => pre_next_word_2(2 downto 0),
       E(0) => sr_awvalid,
@@ -13860,7 +13860,7 @@ begin
       wstrb_wrap_buffer_6 => wstrb_wrap_buffer_6,
       wstrb_wrap_buffer_7 => wstrb_wrap_buffer_7
     );
-si_register_slice_inst: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_35_axi_register_slice__parameterized0\
+si_register_slice_inst: entity work.\microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_register_slice_v2_1_36_axi_register_slice__parameterized0\
      port map (
       D(60 downto 0) => D(60 downto 0),
       E(0) => sr_awvalid,
@@ -13924,7 +13924,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top is
+entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top is
   port (
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC;
@@ -14006,60 +14006,60 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 32;
   attribute C_AXI_IS_ACLK_ASYNC : integer;
-  attribute C_AXI_IS_ACLK_ASYNC of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_AXI_IS_ACLK_ASYNC of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_AXI_PROTOCOL : integer;
-  attribute C_AXI_PROTOCOL of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_AXI_PROTOCOL of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute C_AXI_SUPPORTS_READ of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is "artix7";
+  attribute C_FAMILY of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is "artix7";
   attribute C_FIFO_MODE : integer;
-  attribute C_FIFO_MODE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_FIFO_MODE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_MAX_SPLIT_BEATS : integer;
-  attribute C_MAX_SPLIT_BEATS of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 16;
+  attribute C_MAX_SPLIT_BEATS of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 16;
   attribute C_M_AXI_ACLK_RATIO : integer;
-  attribute C_M_AXI_ACLK_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 2;
+  attribute C_M_AXI_ACLK_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 2;
   attribute C_M_AXI_BYTES_LOG : integer;
-  attribute C_M_AXI_BYTES_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 3;
+  attribute C_M_AXI_BYTES_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 3;
   attribute C_M_AXI_DATA_WIDTH : integer;
-  attribute C_M_AXI_DATA_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 64;
+  attribute C_M_AXI_DATA_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 64;
   attribute C_PACKING_LEVEL : integer;
-  attribute C_PACKING_LEVEL of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute C_PACKING_LEVEL of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute C_RATIO : integer;
-  attribute C_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_RATIO_LOG : integer;
-  attribute C_RATIO_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_RATIO_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_SUPPORTS_ID : integer;
-  attribute C_SUPPORTS_ID of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute C_SUPPORTS_ID of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute C_SYNCHRONIZER_STAGE : integer;
-  attribute C_SYNCHRONIZER_STAGE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 3;
+  attribute C_SYNCHRONIZER_STAGE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 3;
   attribute C_S_AXI_ACLK_RATIO : integer;
-  attribute C_S_AXI_ACLK_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute C_S_AXI_ACLK_RATIO of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute C_S_AXI_BYTES_LOG : integer;
-  attribute C_S_AXI_BYTES_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 2;
+  attribute C_S_AXI_BYTES_LOG of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 2;
   attribute C_S_AXI_DATA_WIDTH : integer;
-  attribute C_S_AXI_DATA_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 32;
+  attribute C_S_AXI_DATA_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 32;
   attribute C_S_AXI_ID_WIDTH : integer;
-  attribute C_S_AXI_ID_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute C_S_AXI_ID_WIDTH of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is "yes";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 1;
+  attribute P_AXI3 of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 0;
+  attribute P_AXI4 of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 2;
+  attribute P_AXILITE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 2;
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 2;
+  attribute P_CONVERSION of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 2;
   attribute P_MAX_SPLIT_BEATS : integer;
-  attribute P_MAX_SPLIT_BEATS of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top : entity is 16;
-end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top;
+  attribute P_MAX_SPLIT_BEATS of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top : entity is 16;
+end microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top;
 
-architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top is
+architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_bresp\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^m_axi_bvalid\ : STD_LOGIC;
@@ -14082,7 +14082,7 @@ GND: unisim.vcomponents.GND
      port map (
       G => \<const0>\
     );
-\gen_upsizer.gen_full_upsizer.axi_upsizer_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_axi_upsizer
+\gen_upsizer.gen_full_upsizer.axi_upsizer_inst\: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_axi_upsizer
      port map (
       D(60 downto 57) => s_axi_awregion(3 downto 0),
       D(56 downto 53) => s_axi_awqos(3 downto 0),
@@ -14235,11 +14235,11 @@ entity microblaze_microblaze_0_axi_periph_imp_auto_us_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_36_top,{}";
+  attribute CHECK_LICENSE_TYPE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "microblaze_microblaze_0_axi_periph_imp_auto_us_0,axi_dwidth_converter_v2_1_37_top,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "axi_dwidth_converter_v2_1_36_top,Vivado 2025.1";
+  attribute X_CORE_INFO of microblaze_microblaze_0_axi_periph_imp_auto_us_0 : entity is "axi_dwidth_converter_v2_1_37_top,Vivado 2025.2";
 end microblaze_microblaze_0_axi_periph_imp_auto_us_0;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 is
@@ -14380,7 +14380,7 @@ architecture STRUCTURE of microblaze_microblaze_0_axi_periph_imp_auto_us_0 is
   attribute X_INTERFACE_INFO of s_axi_wdata : signal is "xilinx.com:interface:aximm:1.0 S_AXI WDATA";
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_36_top
+inst: entity work.microblaze_microblaze_0_axi_periph_imp_auto_us_0_axi_dwidth_converter_v2_1_37_top
      port map (
       m_axi_aclk => '0',
       m_axi_araddr(31 downto 0) => m_axi_araddr(31 downto 0),

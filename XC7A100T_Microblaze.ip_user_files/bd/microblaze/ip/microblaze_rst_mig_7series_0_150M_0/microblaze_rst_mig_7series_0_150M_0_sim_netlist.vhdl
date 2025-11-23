@@ -1,9 +1,9 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Aug  7 10:34:56 2025
--- Host        : TPC-0073 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+-- Date        : Sun Nov 23 14:16:14 2025
+-- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_rst_mig_7series_0_150M_0 -prefix
 --               microblaze_rst_mig_7series_0_150M_0_ microblaze_rst_mig_7series_0_150M_0_sim_netlist.vhdl
 -- Design      : microblaze_rst_mig_7series_0_150M_0
@@ -197,7 +197,7 @@ entity microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single is
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single : entity is "TRUE";
   attribute keep_hierarchy : string;
-  attribute keep_hierarchy of microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single : entity is "true";
+  attribute keep_hierarchy of microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single : entity is "soft";
   attribute xpm_cdc : string;
   attribute xpm_cdc of microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single : entity is "SINGLE";
 end microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single;
@@ -284,7 +284,7 @@ entity \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\ is
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\ : entity is "TRUE";
   attribute keep_hierarchy : string;
-  attribute keep_hierarchy of \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\ : entity is "true";
+  attribute keep_hierarchy of \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\ : entity is "soft";
   attribute xpm_cdc : string;
   attribute xpm_cdc of \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\ : entity is "SINGLE";
 end \microblaze_rst_mig_7series_0_150M_0_xpm_cdc_single__1\;
@@ -1069,7 +1069,7 @@ entity microblaze_rst_mig_7series_0_150M_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_rst_mig_7series_0_150M_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of microblaze_rst_mig_7series_0_150M_0 : entity is "proc_sys_reset,Vivado 2025.1";
+  attribute x_core_info of microblaze_rst_mig_7series_0_150M_0 : entity is "proc_sys_reset,Vivado 2025.2";
 end microblaze_rst_mig_7series_0_150M_0;
 
 architecture STRUCTURE of microblaze_rst_mig_7series_0_150M_0 is

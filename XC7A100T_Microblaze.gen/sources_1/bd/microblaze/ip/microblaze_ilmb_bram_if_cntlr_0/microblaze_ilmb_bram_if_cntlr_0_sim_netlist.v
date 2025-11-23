@@ -1,8 +1,8 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Thu Jul 31 21:13:23 2025
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Sun Nov 23 14:15:56 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim -rename_top microblaze_ilmb_bram_if_cntlr_0 -prefix
 //               microblaze_ilmb_bram_if_cntlr_0_ microblaze_ilmb_bram_if_cntlr_0_sim_netlist.v
@@ -18,16 +18,20 @@
 (* C_ECC_ONOFF_REGISTER = "0" *) (* C_ECC_ONOFF_RESET_VALUE = "1" *) (* C_ECC_STATUS_REGISTERS = "0" *) 
 (* C_FAMILY = "artix7" *) (* C_FAULT_INJECT = "0" *) (* C_HIGHADDR = "64'b0000000000000000000000000000000000000000000000011111111111111111" *) 
 (* C_INTERCONNECT = "0" *) (* C_LMB_AWIDTH = "32" *) (* C_LMB_DWIDTH = "32" *) 
-(* C_LMB_PROTOCOL = "0" *) (* C_MASK = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
-(* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK4 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
-(* C_MASK5 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK6 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK7 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
-(* C_NUM_LMB = "1" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) 
+(* C_LMB_HAS_PROT = "0" *) (* C_LMB_PROTOCOL = "0" *) (* C_MASK = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
+(* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK2 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK3 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
+(* C_MASK4 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK5 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_MASK6 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
+(* C_MASK7 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) (* C_NUM_LMB = "1" *) (* C_PROT_CFG = "8'b11111111" *) 
+(* C_PROT_CFG1 = "8'b11111111" *) (* C_PROT_CFG2 = "8'b11111111" *) (* C_PROT_CFG3 = "8'b11111111" *) 
+(* C_PROT_CFG4 = "8'b11111111" *) (* C_PROT_CFG5 = "8'b11111111" *) (* C_PROT_CFG6 = "8'b11111111" *) 
+(* C_PROT_CFG7 = "8'b11111111" *) (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) 
 (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) (* C_S_AXI_CTRL_HIGHADDR = "32'b00000000000000000000000000000000" *) (* C_UE_FAILING_REGISTERS = "0" *) 
 (* C_WRITE_ACCESS = "2" *) 
 module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
    (LMB_Clk,
     LMB_Rst,
     LMB_ABus,
+    LMB_Prot,
     LMB_WriteDBus,
     LMB_AddrStrobe,
     LMB_ReadStrobe,
@@ -39,6 +43,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl_UE,
     Sl_CE,
     LMB1_ABus,
+    LMB1_Prot,
     LMB1_WriteDBus,
     LMB1_AddrStrobe,
     LMB1_ReadStrobe,
@@ -50,6 +55,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl1_UE,
     Sl1_CE,
     LMB2_ABus,
+    LMB2_Prot,
     LMB2_WriteDBus,
     LMB2_AddrStrobe,
     LMB2_ReadStrobe,
@@ -61,6 +67,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl2_UE,
     Sl2_CE,
     LMB3_ABus,
+    LMB3_Prot,
     LMB3_WriteDBus,
     LMB3_AddrStrobe,
     LMB3_ReadStrobe,
@@ -72,6 +79,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl3_UE,
     Sl3_CE,
     LMB4_ABus,
+    LMB4_Prot,
     LMB4_WriteDBus,
     LMB4_AddrStrobe,
     LMB4_ReadStrobe,
@@ -83,6 +91,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl4_UE,
     Sl4_CE,
     LMB5_ABus,
+    LMB5_Prot,
     LMB5_WriteDBus,
     LMB5_AddrStrobe,
     LMB5_ReadStrobe,
@@ -94,6 +103,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl5_UE,
     Sl5_CE,
     LMB6_ABus,
+    LMB6_Prot,
     LMB6_WriteDBus,
     LMB6_AddrStrobe,
     LMB6_ReadStrobe,
@@ -105,6 +115,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
     Sl6_UE,
     Sl6_CE,
     LMB7_ABus,
+    LMB7_Prot,
     LMB7_WriteDBus,
     LMB7_AddrStrobe,
     LMB7_ReadStrobe,
@@ -147,6 +158,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   input LMB_Clk;
   input LMB_Rst;
   input [0:31]LMB_ABus;
+  input [0:1]LMB_Prot;
   input [0:31]LMB_WriteDBus;
   input LMB_AddrStrobe;
   input LMB_ReadStrobe;
@@ -158,6 +170,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl_UE;
   output Sl_CE;
   input [0:31]LMB1_ABus;
+  input [0:1]LMB1_Prot;
   input [0:31]LMB1_WriteDBus;
   input LMB1_AddrStrobe;
   input LMB1_ReadStrobe;
@@ -169,6 +182,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl1_UE;
   output Sl1_CE;
   input [0:31]LMB2_ABus;
+  input [0:1]LMB2_Prot;
   input [0:31]LMB2_WriteDBus;
   input LMB2_AddrStrobe;
   input LMB2_ReadStrobe;
@@ -180,6 +194,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl2_UE;
   output Sl2_CE;
   input [0:31]LMB3_ABus;
+  input [0:1]LMB3_Prot;
   input [0:31]LMB3_WriteDBus;
   input LMB3_AddrStrobe;
   input LMB3_ReadStrobe;
@@ -191,6 +206,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl3_UE;
   output Sl3_CE;
   input [0:31]LMB4_ABus;
+  input [0:1]LMB4_Prot;
   input [0:31]LMB4_WriteDBus;
   input LMB4_AddrStrobe;
   input LMB4_ReadStrobe;
@@ -202,6 +218,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl4_UE;
   output Sl4_CE;
   input [0:31]LMB5_ABus;
+  input [0:1]LMB5_Prot;
   input [0:31]LMB5_WriteDBus;
   input LMB5_AddrStrobe;
   input LMB5_ReadStrobe;
@@ -213,6 +230,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl5_UE;
   output Sl5_CE;
   input [0:31]LMB6_ABus;
+  input [0:1]LMB6_Prot;
   input [0:31]LMB6_WriteDBus;
   input LMB6_AddrStrobe;
   input LMB6_ReadStrobe;
@@ -224,6 +242,7 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   output Sl6_UE;
   output Sl6_CE;
   input [0:31]LMB7_ABus;
+  input [0:1]LMB7_Prot;
   input [0:31]LMB7_WriteDBus;
   input LMB7_AddrStrobe;
   input LMB7_ReadStrobe;
@@ -643,12 +662,12 @@ module microblaze_ilmb_bram_if_cntlr_0_lmb_bram_if_cntlr
   LUT2 #(
     .INIT(4'h8)) 
     Sl_Ready_INST_0
-       (.I0(lmb_as),
-        .I1(Sl_Rdy),
+       (.I0(Sl_Rdy),
+        .I1(lmb_as),
         .O(Sl_Ready));
 endmodule
 
-(* CHECK_LICENSE_TYPE = "microblaze_ilmb_bram_if_cntlr_0,lmb_bram_if_cntlr,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_bram_if_cntlr,Vivado 2025.1" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_ilmb_bram_if_cntlr_0,lmb_bram_if_cntlr,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "lmb_bram_if_cntlr,Vivado 2025.2" *) 
 (* NotValidForBitStream *)
 module microblaze_ilmb_bram_if_cntlr_0
    (LMB_Clk,
@@ -673,7 +692,7 @@ module microblaze_ilmb_bram_if_cntlr_0
     BRAM_Din_A);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.LMB_Clk CLK" *) (* x_interface_mode = "slave CLK.LMB_Clk" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.LMB_Clk, ASSOCIATED_BUSIF SLMB:SLMB1:SLMB2:SLMB3:SLMB4:SLMB5:SLMB6:SLMB7, ASSOCIATED_RESET LMB_Rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *) input LMB_Clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.LMB_Rst RST" *) (* x_interface_mode = "slave RST.LMB_Rst" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.LMB_Rst, POLARITY ACTIVE_HIGH, TYPE INTERCONNECT, INSERT_VIP 0" *) input LMB_Rst;
-  (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ABUS" *) (* x_interface_mode = "slave SLMB" *) (* x_interface_parameter = "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE, PROTOCOL STANDARD" *) input [0:31]LMB_ABus;
+  (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ABUS" *) (* x_interface_mode = "slave SLMB" *) (* x_interface_parameter = "XIL_INTERFACENAME SLMB, ADDR_WIDTH 32, DATA_WIDTH 32, READ_WRITE_MODE READ_WRITE, PROTOCOL STANDARD, HAS_PROT 0" *) input [0:31]LMB_ABus;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB WRITEDBUS" *) input [0:31]LMB_WriteDBus;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB ADDRSTROBE" *) input LMB_AddrStrobe;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 SLMB READSTROBE" *) input LMB_ReadStrobe;
@@ -780,6 +799,7 @@ module microblaze_ilmb_bram_if_cntlr_0
   (* C_INTERCONNECT = "0" *) 
   (* C_LMB_AWIDTH = "32" *) 
   (* C_LMB_DWIDTH = "32" *) 
+  (* C_LMB_HAS_PROT = "0" *) 
   (* C_LMB_PROTOCOL = "0" *) 
   (* C_MASK = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
   (* C_MASK1 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
@@ -790,6 +810,14 @@ module microblaze_ilmb_bram_if_cntlr_0
   (* C_MASK6 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_MASK7 = "64'b0000000000000000000000000000000000000000100000000000000000000000" *) 
   (* C_NUM_LMB = "1" *) 
+  (* C_PROT_CFG = "8'b11111111" *) 
+  (* C_PROT_CFG1 = "8'b11111111" *) 
+  (* C_PROT_CFG2 = "8'b11111111" *) 
+  (* C_PROT_CFG3 = "8'b11111111" *) 
+  (* C_PROT_CFG4 = "8'b11111111" *) 
+  (* C_PROT_CFG5 = "8'b11111111" *) 
+  (* C_PROT_CFG6 = "8'b11111111" *) 
+  (* C_PROT_CFG7 = "8'b11111111" *) 
   (* C_S_AXI_CTRL_ADDR_WIDTH = "32" *) 
   (* C_S_AXI_CTRL_BASEADDR = "32'b11111111111111111111111111111111" *) 
   (* C_S_AXI_CTRL_DATA_WIDTH = "32" *) 
@@ -809,42 +837,49 @@ module microblaze_ilmb_bram_if_cntlr_0
         .LMB1_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB1_AddrStrobe(1'b0),
         .LMB1_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB1_Prot({1'b0,1'b0}),
         .LMB1_ReadStrobe(1'b0),
         .LMB1_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB1_WriteStrobe(1'b0),
         .LMB2_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB2_AddrStrobe(1'b0),
         .LMB2_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB2_Prot({1'b0,1'b0}),
         .LMB2_ReadStrobe(1'b0),
         .LMB2_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB2_WriteStrobe(1'b0),
         .LMB3_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB3_AddrStrobe(1'b0),
         .LMB3_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB3_Prot({1'b0,1'b0}),
         .LMB3_ReadStrobe(1'b0),
         .LMB3_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB3_WriteStrobe(1'b0),
         .LMB4_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB4_AddrStrobe(1'b0),
         .LMB4_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB4_Prot({1'b0,1'b0}),
         .LMB4_ReadStrobe(1'b0),
         .LMB4_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB4_WriteStrobe(1'b0),
         .LMB5_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB5_AddrStrobe(1'b0),
         .LMB5_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB5_Prot({1'b0,1'b0}),
         .LMB5_ReadStrobe(1'b0),
         .LMB5_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB5_WriteStrobe(1'b0),
         .LMB6_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB6_AddrStrobe(1'b0),
         .LMB6_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB6_Prot({1'b0,1'b0}),
         .LMB6_ReadStrobe(1'b0),
         .LMB6_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB6_WriteStrobe(1'b0),
         .LMB7_ABus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB7_AddrStrobe(1'b0),
         .LMB7_BE({1'b0,1'b0,1'b0,1'b0}),
+        .LMB7_Prot({1'b0,1'b0}),
         .LMB7_ReadStrobe(1'b0),
         .LMB7_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .LMB7_WriteStrobe(1'b0),
@@ -852,6 +887,7 @@ module microblaze_ilmb_bram_if_cntlr_0
         .LMB_AddrStrobe(LMB_AddrStrobe),
         .LMB_BE(LMB_BE),
         .LMB_Clk(LMB_Clk),
+        .LMB_Prot({1'b0,1'b0}),
         .LMB_ReadStrobe(1'b0),
         .LMB_Rst(LMB_Rst),
         .LMB_WriteDBus(LMB_WriteDBus),
