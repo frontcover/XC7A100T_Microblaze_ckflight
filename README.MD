@@ -2,7 +2,7 @@
 
 ## 📸 Block Design
 
-img width=3036 height=1548 alt=Image src=httpsgithub.comuser-attachmentsassets1420e626-9324-427d-b37e-25fdba033b37 
+<img width="1555" height="1238" alt="Image" src="https://github.com/user-attachments/assets/b871a93f-e29a-4732-b5b4-effca98d9696" />
 
 This project implements a fully functional MicroBlaze soft processor system on a Xilinx Artix-7 FPGA (e.g., Nexys-4 DDR).  
 It integrates DDR2 memory, AXI peripherals, and custom VHDL logic modules — forming a complete embedded platform for hardware-software co-development.
@@ -13,6 +13,7 @@ It integrates DDR2 memory, AXI peripherals, and custom VHDL logic modules — fo
 
 The system is centered around the Xilinx MicroBlaze CPU, with peripherals connected via AXI Interconnects.  
 It supports DMA data streaming, SPII²C communication, UART bridge to USB, GPIO control, and DDR2 SDRAM.
+DMA data streaming from vhdl to microblaze achieves 93 Mb/s.
 
 ### 🧩 Block Design Summary
 
