@@ -13,7 +13,7 @@ It integrates DDR2 memory, AXI peripherals, and custom VHDL logic modules — fo
 
 The system is centered around the Xilinx MicroBlaze CPU, with peripherals connected via AXI Interconnects.  
 It supports DMA data streaming, SPII²C communication, UART bridge to USB, GPIO control, and DDR2 SDRAM.
-DMA data streaming from vhdl to microblaze achieves 93 Mb/s.
+DMA data streaming from vhdl to DDR2 ram through microblaze achieves 93 Mb/s.
 
 ### 🧩 Block Design Summary
 
