@@ -16,6 +16,8 @@ It supports DMA data streaming, SPI/I²C communication, UART bridge to USB, GPIO
 
 The DMA engine streams data from VHDL into DDR2 RAM through MicroBlaze, achieving **~93 MB/s** S2MM write performance.
 
+## Vitis code is developed under the folder Microblaze_Vitis
+
 ---
 
 ## 🧩 Block Design Summary
