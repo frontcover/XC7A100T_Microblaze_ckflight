@@ -12,23 +12,26 @@ It integrates DDR2 memory, AXI peripherals, and custom VHDL logic modules — fo
 ## 🔧 System Overview
 
 The system is centered around the Xilinx MicroBlaze CPU, with peripherals connected via AXI Interconnects.  
-It supports DMA data streaming, SPII²C communication, UART bridge to USB, GPIO control, and DDR2 SDRAM.
-DMA data streaming from vhdl to DDR2 ram through microblaze achieves 93 Mb/s.
+It supports DMA data streaming, SPI/I²C communication, UART bridge to USB, GPIO control, and DDR2 SDRAM.
 
-### 🧩 Block Design Summary
+The DMA engine streams data from VHDL into DDR2 RAM through MicroBlaze, achieving **~93 MB/s** S2MM write performance.
 
- Peripheral  Description 
----------------------------
- MicroBlaze CPU  32-bit soft processor with local instruction & data memory 
- AXI Interconnect  Connects all memory-mapped peripherals 
- MIG DDR2 Controller  External DDR2 SDRAM interface 
- AXI DMA  Handles high-speed S2MM data streaming to DDR memory 
- AXI GPIO (x4)  General-purpose IO for LEDs, JD connectors, and debug 
- AXI UARTLite  Serial link to FT2232H USB-UART 
- AXI Quad SPI  Interface to onboard ADXL362 accelerometer 
- AXI IIC (x2)  Dual I²C interfaces for sensors or extensions 
- AXI Timer  Optional timercounter module 
- MDM + Interrupt Ctrl  Debug module and interrupt handling support 
+---
+
+## 🧩 Block Design Summary
+
+| Peripheral          | Description                                      |
+|---------------------|--------------------------------------------------|
+| MicroBlaze CPU      | 32-bit soft processor with local I/D memory     |
+| AXI Interconnect    | Connects all memory-mapped peripherals           |
+| MIG DDR2 Controller | External DDR2 SDRAM interface                    |
+| AXI DMA             | High-speed S2MM data streaming to DDR memory    |
+| AXI GPIO (x4)       | LEDs, JD header, HC-SR04 trigger/echo           |
+| AXI UARTLite        | Serial link to FT2232H USB-UART                 |
+| AXI Quad SPI        | Interface to onboard ADXL362 accelerometer      |
+| AXI IIC (x2)        | Dual I²C interfaces for MPU6500, ADT7420, etc.  |
+| AXI Timer           | 64-bit cascade timer for precise timing         |
+| MDM + Intc          | Debug module + interrupt controller              |
 
 ---
 
